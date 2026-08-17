@@ -40,8 +40,8 @@
 
             <div class="relative">
 
-                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1400&q=85"
-                    alt="Cooking in the kitchen" class="aspect-[4/5] w-full object-cover">
+                <img src="{{ asset('storage/kamo_owner.jpeg') }}" alt="Cooking in the kitchen"
+                    class="aspect-[4/5] w-full object-cover">
 
                 <div class="absolute -bottom-5 -left-5 hidden bg-[#f7f3ed] px-7 py-5 shadow-sm sm:block">
 

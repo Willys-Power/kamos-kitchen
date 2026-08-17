@@ -28,8 +28,8 @@
             <article class="group">
 
                 <div class="aspect-[4/5] overflow-hidden bg-[#ded5ca]">
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=85"
-                        alt="Fresh healthy dish"
+                    <img src="{{ asset('storage/kamo_4.jpeg') }}"
+                        alt="Quick kota meal"
                         class="h-full w-full object-cover transition duration-700 group-hover:scale-105">
                 </div>
 
@@ -37,7 +37,7 @@
 
                     <div>
                         <h3 class="font-serif text-2xl">
-                            Signature Bowl
+                            Grilled Kota Meal
                         </h3>
 
                         <p class="mt-1 text-sm text-[#6f665f]">
@@ -46,7 +46,7 @@
                     </div>
 
                     <span class="text-sm font-semibold">
-                        R129
+                        R30
                     </span>
 
                 </div>
@@ -58,7 +58,7 @@
             <article class="group">
 
                 <div class="aspect-[4/5] overflow-hidden bg-[#ded5ca]">
-                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+                    <img src="{{ asset('storage/kitchen.jpg') }}"
                         alt="Fresh vegetable dish"
                         class="h-full w-full object-cover transition duration-700 group-hover:scale-105">
                 </div>
@@ -88,7 +88,7 @@
             <article class="group">
 
                 <div class="aspect-[4/5] overflow-hidden bg-[#ded5ca]">
-                    <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85"
+                    <img src="{{ asset('storage/kitchen.jpg') }}"
                         alt="Beautifully prepared meal"
                         class="h-full w-full object-cover transition duration-700 group-hover:scale-105">
                 </div>

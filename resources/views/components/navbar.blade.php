@@ -1,59 +1,46 @@
 <header class="absolute inset-x-0 top-0 z-50">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
 
-        {{-- Logo --}}
-        <a
-            href="/"
-            class="group text-white"
-            aria-label="Kamo's Kitchen home"
-        >
-            <span class="block font-serif text-2xl leading-none tracking-tight">
+        <a href="/" class="group">
+
+            <span class="font-display text-2xl uppercase tracking-wide text-kamo-cream">
                 Kamo's
             </span>
 
-            <span class="block text-[0.65rem] uppercase tracking-[0.3em] opacity-80">
+            <span class="ml-1 font-script text-2xl font-bold text-kamo-yellow">
                 Kitchen
             </span>
+
         </a>
 
-        {{-- Desktop navigation --}}
+
         <div class="hidden items-center gap-8 md:flex">
 
-            <a
-                href="#menu"
-                class="text-sm font-medium text-white/90 transition hover:text-white"
-            >
+            <a href="#menu"
+                class="font-body text-xs font-bold uppercase tracking-[0.2em] text-kamo-cream transition hover:text-kamo-yellow">
                 Menu
             </a>
 
-            <a
-                href="#specials"
-                class="text-sm font-medium text-white/90 transition hover:text-white"
-            >
+            <a href="#specials"
+                class="font-body text-xs font-bold uppercase tracking-[0.2em] text-kamo-cream transition hover:text-kamo-yellow">
                 Specials
             </a>
 
-            <a
-                href="#story"
-                class="text-sm font-medium text-white/90 transition hover:text-white"
-            >
+            <a href="#story"
+                class="font-body text-xs font-bold uppercase tracking-[0.2em] text-kamo-cream transition hover:text-kamo-yellow">
                 Our Story
             </a>
 
-            <a
-                href="#catering"
-                class="text-sm font-medium text-white/90 transition hover:text-white"
-            >
+            <a href="#catering"
+                class="font-body text-xs font-bold uppercase tracking-[0.2em] text-kamo-cream transition hover:text-kamo-yellow">
                 Catering
             </a>
 
         </div>
 
-        {{-- Order button --}}
-        <a
-            href="#order"
-            class="border border-white/70 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-[#241f1b]"
-        >
+
+        <a href="#order"
+            class="bg-kamo-yellow px-5 py-3 font-body text-xs font-extrabold uppercase tracking-[0.15em] text-kamo-black transition hover:-translate-y-1 hover:bg-kamo-orange">
             Order Now
         </a>
 
