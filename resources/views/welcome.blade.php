@@ -21,6 +21,7 @@
 </head>
 
 <body class="bg-[#f7f3ed] text-[#241f1b] antialiased">
+
     {{-- <x-kamo-loader /> --}}
 
     <x-navbar />
@@ -42,6 +43,18 @@
 
         <x-cta />
     </main>
+
+    {{-- Fixed WhatsApp CTA --}}
+    <a href="https://wa.me/0365842568"
+        class="fixed bottom-16 right-6 rounded-full bg-green-600 px-5 py-4 font-body text-xs font-bold uppercase tracking-[0.15em] text-kamo-cream transition-colors duration-300 hover:bg-kamo-green/90 shadow-2xl shadow-kamo-green/20 z-[9999]"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Order via Whatsapp
+        {{-- <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg> --}}
+    </a>
 
     <x-footer />
 

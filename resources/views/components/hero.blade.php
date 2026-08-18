@@ -21,7 +21,7 @@
     ============================================================= --}}
 
     {{-- Tomato --}}
-    <img src="{{ asset('storage/kamos-kitchen/tomato.png') }}" alt="" aria-hidden="true"
+    <img src="{{ asset('storage/kamos-kitchen/kamo_3blank.png') }}" alt="" aria-hidden="true"
         class="kamo-food kamo-food-tomato">
 
 
@@ -43,11 +43,6 @@
     {{-- Fries --}}
     <img src="{{ asset('storage/kamos-kitchen/fries.png') }}" alt="" aria-hidden="true"
         class="kamo-food kamo-food-fries">
-
-
-    {{-- Onion --}}
-    <img src="{{ asset('storage/kamos-kitchen/onions.png') }}" alt="" aria-hidden="true"
-        class="kamo-food kamo-food-onion">
 
 
     {{-- ============================================================

@@ -2,8 +2,7 @@
 
     {{-- Scroll indicator from hero --}}
     <div
-        class="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-12 border-2 border-kamo-orange rounded-full flex items-center justify-center opacity-0 animate-[slideUp_.5s_.3s_ease-out_forwards] sm:opacity-20"
-    >
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-12 border-2 border-kamo-orange rounded-full flex items-center justify-center opacity-0 animate-[slideUp_.5s_.3s_ease-out_forwards] sm:opacity-20">
         <span class="text-xs font-bold uppercase tracking-wider text-kamo-orange">
             ↓ Scroll for more
         </span>
@@ -11,8 +10,8 @@
 
     {{-- decorative wave at top --}}
     <div
-        class="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-kamo-orange/5 via-kamo-yellow/5 to-transparent opacity-80 pointer-events-none"
-    ></div>
+        class="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-kamo-orange/5 via-kamo-yellow/5 to-transparent opacity-80 pointer-events-none">
+    </div>
 
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -24,7 +23,8 @@
                     From our kitchen
                 </p>
 
-                <h2 class="kamo-display kamo-display-orange mt-4 max-w-xl font-serif text-5xl leading-none tracking-tight sm:text-7xl">
+                <h2
+                    class="kamo-display kamo-display-orange mt-4 max-w-xl font-serif text-5xl leading-none tracking-tight sm:text-7xl">
                     Made for the
                     <span class="italic">moment.</span>
                 </h2>
@@ -32,21 +32,12 @@
                 {{-- Order Now CTA prominent at bottom of header --}}
                 <div class="mt-8 flex items-center gap-3 pt-4 border-t border-kamo-orange/20">
 
-                    <a href="#order"
-                        class="kamo-hero-order flex items-center gap-2"
-                    >
+                    <a href="#order" class="kamo-hero-order flex items-center gap-2">
                         <span>Order Now</span>
 
-                        <svg
-                            class="kamo-hero-order-arrow"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        >
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        <svg class="kamo-hero-order-arrow" width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
 
@@ -55,13 +46,11 @@
 
             {{-- Floating "made fresh" tag --}}
             <div class="relative -top-6 right-0">
-                <div
-                    class="kamo-spark kamo-spark-one text-kamo-yellow animate-kamoSpark"
-                    style="font-size: 1.5rem;">&starf;
+                <div class="kamo-spark kamo-spark-one text-kamo-yellow animate-kamoSpark" style="font-size: 1.5rem;">
+                    &starf;
                 </div>
                 <div
-                    class="absolute -bottom-2 -right-2 rounded-full bg-kamo-green/20 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-kamo-green"
-                >
+                    class="absolute -bottom-2 -right-2 rounded-full bg-kamo-green/20 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-kamo-green">
                     Fresh
                 </div>
             </div>
@@ -70,151 +59,356 @@
 
 
         {{-- Dishes grid with food-inspired animations --}}
-        <div class="mt-14 grid gap-6 md:grid-cols-3">
+        {{-- ============================================================
+    KAMO'S KITCHEN — FEATURED DISHES
+    Editorial / hand-drawn food poster style
+============================================================ --}}
 
-            {{-- Dish 1 --}}
-            <article class="group relative overflow-hidden">
+        <div class="mt-16 md:mt-24">
 
-                {{-- Floating food element above dish --}}
-                <div
-                    class="absolute -top-4 left-1/2 -translate-x-1/2 kamo-food kamo-food-chicken animate-kamoFoodThree"
-                    style="width: clamp(140px, 17vw, 280px); left: -4%; bottom: 13%; transform: rotate(-8deg);"
-                >
-                    <!-- chicken placeholder -->
-                </div>
+            <div class="grid grid-cols-1 gap-16 md:grid-cols-12 md:gap-8">
 
-                {{-- Dish image --}}
-                <div class="aspect-[4/5] overflow-hidden rounded-[1rem] bg-kamo-brown/10">
 
-                    <img
-                        src="{{ asset('storage/kamos-kitchen/kamo_3.png') }}"
-                        alt="Quick kota meal"
-                        class="h-full w-full object-cover transition-all duration-700 group-hover:translate-y-2 group-hover:shadow-2xl group-hover:brightness-105"
-                    />
+                {{-- =====================================================
+            DISH 01
+        ====================================================== --}}
 
-                    {{-- Dish badge --}}
+                <article class="kamo-dish-card group relative md:col-span-5 md:mt-8">
+
+                    {{-- Decorative number --}}
                     <div
-                        class="absolute -top-2 -left-2 rounded-full bg-kamo-green px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-kamo-cream"
-                    >
-                        <span class="font-script">New</span>
+                        class="absolute -left-3 -top-8 z-20 font-serif text-7xl font-black leading-none text-kamo-orange/20 md:-left-8">
+                        01
                     </div>
 
-                </div>
 
-                {{-- Dish info with slide-in --}}
-                <div class="flex items-start justify-between gap-4 pt-5">
+                    {{-- Handwritten label --}}
+                    <div
+                        class="absolute -right-2 top-4 z-30 -rotate-6 font-script text-xl text-kamo-orange md:-right-8">
+                        crowd favourite
+                    </div>
 
-                    <div>
-                        <h3 class="font-serif text-2xl">
-                             Gummy Smoothy
+
+                    {{-- Image --}}
+                    <div class="relative overflow-visible">
+
+                        {{-- Background paper shape --}}
+                        <div class="absolute inset-0 translate-x-3 translate-y-3 rotate-2 bg-kamo-orange/20"></div>
+
+
+                        {{-- Image frame --}}
+                        <div class="relative aspect-[4/5] overflow-hidden bg-kamo-brown">
+
+                            <img src="{{ asset('storage/kamos-kitchen/kamo_3.png') }}" alt="Gummy Smoothy"
+                                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-hover:rotate-1" />
+
+
+                            {{-- subtle colour wash --}}
+                            <div
+                                class="pointer-events-none absolute inset-0 bg-kamo-orange/0 transition-colors duration-500 group-hover:bg-kamo-orange/10">
+                            </div>
+
+
+                            {{-- hand drawn corner --}}
+                            <div class="absolute bottom-4 left-4 h-12 w-12 border-b-2 border-l-2 border-kamo-cream/70">
+                            </div>
+
+                        </div>
+
+
+                        {{-- Price sticker --}}
+                        <div
+                            class="absolute -bottom-6 -right-3 z-20 flex h-20 w-20 rotate-6 items-center justify-center rounded-full bg-kamo-yellow shadow-lg transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+
+                            <div class="text-center">
+
+                                <span class="block text-[9px] font-bold uppercase tracking-wider text-kamo-green">
+                                    only
+                                </span>
+
+                                <span class="block font-serif text-2xl font-black text-kamo-green">
+                                    R15
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    {{-- Content --}}
+                    <div class="relative mt-10 pr-6">
+
+                        {{-- hand drawn divider --}}
+                        <div class="mb-4 flex items-center gap-3">
+
+                            <span class="h-[2px] w-12 rotate-1 bg-kamo-orange"></span>
+
+                            <span class="font-script text-sm text-kamo-orange">
+                                made fresh
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="font-display text-4xl leading-none text-kamo-cream md:text-5xl">
+                            Gummy
+                            <span class="text-kamo-orange">
+                                Smoothy
+                            </span>
                         </h3>
 
-                        <p class="mt-1 text-sm text-[var(--color-kamo-cream)]">
-                            Fresh ingredients, bold flavours.
+
+                        <p class="mt-4 max-w-sm text-sm leading-7 text-kamo-cream/70">
+                            Fresh ingredients, bold flavours and a little
+                            something sweet from Kamo's kitchen.
                         </p>
+
                     </div>
 
-                    <span class="text-sm font-semibold">
-                        R15
-                    </span>
+                </article>
 
-                </div>
 
-            </article>
 
-            {{-- Dish 2 --}}
-            <article class="group relative overflow-hidden">
+                {{-- =====================================================
+            DISH 02
+        ====================================================== --}}
 
-                {{-- Floating food element above dish --}}
-                <div
-                    class="absolute -top-4 left-1/2 -translate-x-1/2 kamo-food kamo-food-tomato animate-kamoFoodOne"
-                    style="width: clamp(100px, 14vw, 220px); top: 3%; left: -2%; transform: rotate(-18deg);"
-                >
-                    <!-- tomato placeholder -->
-                </div>
+                <article class="kamo-dish-card group relative md:col-span-5 md:col-start-8 md:-mt-12">
 
-                <div class="aspect-[4/5] overflow-hidden bg-kamo-brown/10">
-
-                    <img
-                        src="{{ asset('storage/kamos-kitchen/special-meal.png') }}"
-                        alt="Fresh vegetable dish"
-                        class="h-full w-full object-cover transition-all duration-700 group-hover:translate-y-2 group-hover:shadow-2xl group-hover:brightness-105"
-                    />
-
+                    {{-- Decorative number --}}
                     <div
-                        class="absolute -top-2 -left-2 rounded-full bg-kamo-orange px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-kamo-cream"
-                    >
-                        <span class="font-script">Season</span>
+                        class="absolute -right-2 -top-8 z-20 font-serif text-7xl font-black leading-none text-kamo-green/30 md:-right-8">
+                        02
                     </div>
 
-                </div>
 
-                <div class="flex items-start justify-between gap-4 pt-5">
+                    {{-- Seasonal label --}}
+                    <div class="absolute -left-4 top-8 z-30 rotate-3 font-script text-xl text-kamo-yellow md:-left-10">
+                        straight from the kitchen
+                    </div>
 
-                    <div>
-                        <h3 class="font-serif text-2xl">
-                            Home-Style Plate
+
+                    {{-- Image --}}
+                    <div class="relative overflow-visible">
+
+                        {{-- Green paper shadow --}}
+                        <div class="absolute inset-0 -translate-x-3 translate-y-3 -rotate-2 bg-kamo-green/30"></div>
+
+
+                        <div class="relative aspect-[4/5] overflow-hidden bg-kamo-brown">
+
+                            <img src="{{ asset('storage/kamos-kitchen/special-meal.png') }}" alt="Home Style Plate"
+                                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-hover:-rotate-1" />
+
+
+                            <div
+                                class="pointer-events-none absolute inset-0 bg-kamo-green/0 transition-colors duration-500 group-hover:bg-kamo-green/10">
+                            </div>
+
+
+                            {{-- little drawn star --}}
+                            <svg class="absolute right-5 top-5 h-8 w-8 text-kamo-yellow opacity-80 transition-transform duration-500 group-hover:rotate-45 group-hover:scale-125"
+                                viewBox="0 0 40 40" fill="none">
+                                <path d="M20 2L23 17L38 20L23 23L20 38L17 23L2 20L17 17L20 2Z" fill="currentColor" />
+                            </svg>
+
+                        </div>
+
+
+                        {{-- Price --}}
+                        <div
+                            class="absolute -bottom-5 -left-4 z-20 rotate-[-7deg] bg-kamo-cream px-5 py-3 shadow-lg transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105">
+
+                            <span class="block font-serif text-2xl font-black text-kamo-green">
+                                R119
+                            </span>
+
+                            <span class="block text-[8px] font-bold uppercase tracking-[.2em] text-kamo-green/60">
+                                homemade
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    {{-- Content --}}
+                    <div class="relative mt-10 pl-2">
+
+                        <div class="mb-4 flex items-center gap-3">
+
+                            <span class="font-script text-sm text-kamo-green">
+                                comfort food
+                            </span>
+
+                            <span class="h-[2px] w-10 -rotate-2 bg-kamo-green"></span>
+
+                        </div>
+
+
+                        <h3 class="font-display text-4xl leading-none text-kamo-cream md:text-5xl">
+                            Home-Style
+                            <span class="text-kamo-yellow">
+                                Plate
+                            </span>
                         </h3>
 
-                        <p class="mt-1 text-sm text-[var(--color-kamo-cream)]">
+
+                        <p class="mt-4 max-w-sm text-sm leading-7 text-kamo-cream/70">
                             Comfort food, the Kamo's way.
+                            Familiar flavours made with homemade love.
                         </p>
+
                     </div>
 
-                    <span class="text-sm font-semibold">
-                        R119
-                    </span>
+                </article>
 
-                </div>
 
-            </article>
 
-            {{-- Dish 3 --}}
-            <article class="group relative overflow-hidden">
+                {{-- =====================================================
+            DISH 03 — FEATURED / BIGGER
+        ====================================================== --}}
 
-                {{-- Floating food element above dish --}}
-                <div
-                    class="absolute -top-4 left-1/2 -translate-x-1/2 kamo-food kamo-food-burger animate-kamoFoodFour"
-                    style="width: clamp(150px, 21vw, 340px); right: -6%; bottom: 8%; transform: rotate(7deg);"
-                >
-                    <!-- burger placeholder -->
-                </div>
+                <article class="kamo-dish-card group relative md:col-span-7 md:col-start-3 md:mt-12">
 
-                <div class="aspect-[4/5] overflow-hidden bg-kamo-brown/10">
-
-                    <img
-                        src="{{ asset('storage/kamos-kitchen/kamo_4.png') }}"
-                        alt="Beautifully prepared meal"
-                        class="h-full w-full object-cover transition-all duration-700 group-hover:translate-y-2 group-hover:shadow-2xl group-hover:brightness-105"
-                    />
-
+                    {{-- Big background number --}}
                     <div
-                        class="absolute -top-2 -left-2 rounded-full bg-kamo-yellow px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-kamo-brown"
-                    >
-                        <span class="font-script">Special</span>
+                        class="pointer-events-none absolute -left-16 -top-16 z-0 hidden font-serif text-[12rem] font-black leading-none text-kamo-yellow/10 md:block">
+                        03
                     </div>
 
-                </div>
 
-                <div class="flex items-start justify-between gap-4 pt-5">
-
-                    <div>
-                        <h3 class="font-serif text-2xl">
-                            Kamo's Favourite
-                        </h3>
-
-                        <p class="mt-1 text-sm text-[var(--color-kamo-cream)]">
-                            One of the dishes we love most.
-                        </p>
+                    {{-- Special handwritten heading --}}
+                    <div
+                        class="absolute -right-3 -top-10 z-30 rotate-[-4deg] font-script text-2xl text-kamo-yellow md:right-4">
+                        Kamo's pick!
                     </div>
 
-                    <span class="text-sm font-semibold">
-                        R30
+
+                    {{-- Main image --}}
+                    <div class="relative overflow-visible">
+
+                        {{-- Paper shadow --}}
+                        <div class="absolute inset-0 translate-x-4 translate-y-4 -rotate-1 bg-kamo-yellow/20"></div>
+
+
+                        <div class="relative aspect-[16/10] overflow-hidden bg-kamo-brown">
+
+                            <img src="{{ asset('storage/kamos-kitchen/kamo_4.png') }}" alt="Kamo's Favourite"
+                                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-hover:rotate-[0.5deg]" />
+
+
+                            <div
+                                class="pointer-events-none absolute inset-0 bg-kamo-yellow/0 transition-colors duration-500 group-hover:bg-kamo-yellow/10">
+                            </div>
+
+
+                            {{-- drawn border --}}
+                            <div class="pointer-events-none absolute inset-4 border border-kamo-cream/30"></div>
+
+                        </div>
+
+
+                        {{-- Featured price --}}
+                        <div
+                            class="absolute -bottom-7 right-6 z-20 flex h-24 w-24 -rotate-3 items-center justify-center rounded-full border-4 border-kamo-green bg-kamo-yellow shadow-xl transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
+
+                            <div class="text-center">
+
+                                <span class="block font-script text-xs text-kamo-green">
+                                    just
+                                </span>
+
+                                <span class="block font-serif text-3xl font-black text-kamo-green">
+                                    R30
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    {{-- Content --}}
+                    <div class="mt-10 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
+
+                        <div>
+
+                            <div class="mb-4 flex items-center gap-3">
+
+                                <span class="h-[2px] w-14 rotate-1 bg-kamo-yellow"></span>
+
+                                <span class="font-script text-sm text-kamo-yellow">
+                                    chef's choice
+                                </span>
+
+                            </div>
+
+
+                            <h3 class="font-display text-5xl leading-none text-kamo-cream md:text-6xl">
+                                Kamo's
+                                <span class="text-kamo-orange">
+                                    Favourite
+                                </span>
+                            </h3>
+
+
+                            <p class="mt-5 max-w-xl text-sm leading-7 text-kamo-cream/70">
+                                One of the dishes we love most.
+                                Prepared with the flavours that make
+                                Kamo's Kitchen feel like home.
+                            </p>
+
+                        </div>
+
+
+                        {{-- Mini graphic --}}
+                        <div class="hidden md:block">
+
+                            <svg width="90" height="45" viewBox="0 0 90 45" fill="none"
+                                class="text-kamo-cream/50">
+
+                                <path d="M5 22C25 5 65 5 85 22" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+
+                                <path d="M20 29C35 20 55 20 70 29" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            {{-- ============================================================
+        VIEW FULL MENU CTA
+    ============================================================= --}}
+
+            <div class="mt-20 flex justify-center">
+
+                <a href="#menu"
+                    class="group inline-flex items-center gap-4 font-display text-2xl text-kamo-cream transition-colors hover:text-kamo-yellow">
+
+                    <span>
+                        See the full menu
                     </span>
 
-                </div>
+                    <span
+                        class="flex h-11 w-11 rotate-[-8deg] items-center justify-center rounded-full bg-kamo-orange text-kamo-cream transition-transform duration-300 group-hover:rotate-6 group-hover:translate-x-2">
+                        →
+                    </span>
 
-            </article>
+                </a>
+
+            </div>
 
         </div>
 
@@ -228,19 +422,11 @@
                 </p>
 
                 <a href="#order"
-                    class="kamo-hero-order text-sm px-5 py-3 rounded-full"
-                >
+                    class="kamo-hero-order text-sm px-5 py-3 rounded-full bg-kamo-orange hover:bg-kamo-orange/90 transition-colors duration-300 shadow-lg shadow-kamo-orange/20">
                     Order Now
-                    <svg
-                        class="kamo-hero-order-arrow w-4 h-4"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <svg class="kamo-hero-order-arrow w-4 h-4" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </a>
 
@@ -263,11 +449,12 @@
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     // Stagger animations for dishes
-                    const dishes = document.querySelectorAll('.kamo-food, .kamo-display, .kamo-spark');
+                    const dishes = document.querySelectorAll(
+                        '.kamo-food, .kamo-display, .kamo-spark, article.grid > *');
                     dishes.forEach((dish, i) => {
                         setTimeout(() => {
                             dish.style.animationPlayState = 'running';
-                        }, i * 100);
+                        }, i * 120);
                     });
 
                     observer.unobserve(entry.target);

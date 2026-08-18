@@ -400,7 +400,7 @@ body {
 /* tomato */
 
 .kamo-food-tomato {
-    width: clamp(100px, 14vw, 220px);
+    width: clamp(150px, 14vw, 220px);
 
     top: 3%;
 
@@ -408,7 +408,7 @@ body {
 
     transform: rotate(-18deg);
 
-    animation: kamoFoodOne 6s ease-in-out infinite;
+    /* animation: kamoFoodOne 6s ease-in-out infinite; */
 }
 
 /* lettuce */
@@ -422,35 +422,35 @@ body {
 
     transform: rotate(12deg);
 
-    animation: kamoFoodTwo 7s ease-in-out infinite;
+    /* animation: kamoFoodTwo 7s ease-in-out infinite; */
 }
 
 /* chicken */
 
 .kamo-food-chicken {
-    width: clamp(140px, 17vw, 280px);
+    width: clamp(180px, 24vw, 280px);
 
-    left: -4%;
+    left: 4%;
 
     bottom: 13%;
 
-    transform: rotate(-8deg);
+    transform: rotate(-16deg);
 
-    animation: kamoFoodThree 7s ease-in-out infinite;
+    /* animation: kamoFoodThree 7s ease-in-out infinite; */
 }
 
 /* burger */
 
 .kamo-food-burger {
-    width: clamp(250px, 50vw, 440px);
+    width: clamp(250px, 80vw, 440px);
 
     bottom: 25%;
+
+    right: 15%;
 
     transform: rotate(7deg);
 
     /* animation: kamoFoodFour 8s ease-in-out infinite; */
-
-
 }
 
 /* fries */
@@ -458,9 +458,9 @@ body {
 .kamo-food-fries {
     width: clamp(130px, 17vw, 280px);
 
-    left: 7%;
+    left: 10%;
 
-    bottom: -3%;
+    bottom: 3%;
 
     transform: rotate(-12deg);
 
@@ -830,9 +830,9 @@ body {
     }
 
     .kamo-food-tomato {
-        top: 8%;
+        top: 10%;
 
-        left: -35px;
+        left: -25px;
     }
 
     .kamo-food-lettuce {
@@ -854,9 +854,9 @@ body {
     }
 
     .kamo-food-fries {
-        left: -20px;
+        left: 10px;
 
-        bottom: 0;
+        bottom: 2%;
 
         opacity: 0.8;
     }
@@ -1321,6 +1321,7 @@ body {
 
 .kamo-loader {
     position: fixed;
+    animation: kamoEmergencyHide 0s 5s forwards;
 
     inset: 0;
 
@@ -1351,6 +1352,13 @@ body {
     visibility: hidden;
 
     pointer-events: none;
+}
+@keyframes kamoEmergencyHide {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 /* ============================================================

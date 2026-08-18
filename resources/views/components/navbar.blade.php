@@ -3,25 +3,22 @@
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
 
         {{-- LEFT: Mobile menu --}}
-        <button type="button" id="mobile-menu-button"
-            class="flex h-11 w-11 items-center justify-center rounded-full border-2 border-kamo-cream/60 text-kamo-cream transition hover:bg-kamo-cream hover:text-kamo-brown md:hidden"
-            aria-label="Open navigation">
+        <button id="menu-button" type="button"
+            class="md:hidden relative z-[100] flex h-12 w-12 items-center justify-center rounded-full bg-kamo-yellow"
+            aria-label="Open menu">
+            <span class="sr-only">Open menu</span>
 
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-
+            <div class="flex flex-col gap-1.5">
+                <span class="block h-0.5 w-6 bg-kamo-green"></span>
+                <span class="block h-0.5 w-6 bg-kamo-green"></span>
+                <span class="block h-0.5 w-6 bg-kamo-green"></span>
+            </div>
         </button>
 
 
         {{-- LOGO --}}
 
         <a href="/" class="absolute left-1/2 top-4 flex -translate-x-1/2 flex-col items-center">
-
-            {{-- Use actual logo when available --}}
-            {{-- <img src="{{ asset('storage/kamos-kitchen/logo.png') }}" alt="Kamo's Kitchen"
-            class="h-20 w-auto object-contain drop-shadow-md sm:h-24"> --}}
             <x-animated-logo />
         </a>
 
@@ -61,30 +58,49 @@
 
     </nav>
 
+    {{-- Mobile fullscreen menu --}}
+    <div id="mobile-menu" class="fixed inset-0 z-[90] hidden bg-kamo-green">
 
-    {{-- Mobile menu --}}
-    <div id="mobile-menu" class="hidden border-y-2 border-kamo-brown/10 bg-kamo-cream px-6 py-8 md:hidden">
+        <div class="flex min-h-screen flex-col px-8 py-8">
 
-        <div class="flex flex-col gap-5">
+            {{-- Close --}}
+            <div class="flex justify-end">
 
-            <a href="#menu" class="font-display text-3xl text-kamo-brown">
-                Menu
-            </a>
+                <button id="menu-close" type="button"
+                    class="flex h-12 w-12 items-center justify-center rounded-full bg-kamo-yellow text-2xl text-kamo-green"
+                    aria-label="Close menu">
+                    ×
+                </button>
 
-            <a href="#specials" class="font-display text-3xl text-kamo-brown">
-                Specials
-            </a>
+            </div>
 
-            <a href="#story" class="font-display text-3xl text-kamo-brown">
-                Our Story
-            </a>
 
-            <a href="#catering" class="font-display text-3xl text-kamo-brown">
-                Catering
-            </a>
+            {{-- Menu --}}
+            <nav class="flex flex-1 flex-col items-center justify-center gap-8">
+
+                <a href="#home" class="font-display text-5xl text-kamo-cream">
+                    Home
+                </a>
+
+                <a href="#menu" class="font-display text-5xl text-kamo-cream">
+                    Menu
+                </a>
+
+                <a href="#specials" class="font-display text-5xl text-kamo-cream">
+                    Specials
+                </a>
+
+                <a href="#story" class="font-display text-5xl text-kamo-cream">
+                    Our Story
+                </a>
+
+                <a href="#contact" class="font-display text-5xl text-kamo-cream">
+                    Contact
+                </a>
+
+            </nav>
 
         </div>
 
     </div>
-
 </header>
