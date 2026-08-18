@@ -45,7 +45,7 @@
     </main>
 
     {{-- Fixed WhatsApp CTA --}}
-    <a href="https://wa.me/0365842568"
+    <a href="https://wa.me/0648508581"
         class="fixed bottom-16 right-6 rounded-full bg-green-600 px-5 py-4 font-body text-xs font-bold uppercase tracking-[0.15em] text-kamo-cream transition-colors duration-300 hover:bg-kamo-green/90 shadow-2xl shadow-kamo-green/20 z-[9999]"
         target="_blank"
         rel="noopener noreferrer"
