@@ -1,4 +1,4 @@
-<section class="bg-[#f7f3ed] py-24 sm:py-32">
+<section class="bg-[#d6c5b4] py-24 sm:py-32">
 
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -25,16 +25,16 @@
 
         <div class="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
 
-            <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=80"
+            <img src="{{ asset('storage/kamos-kitchen/wingsfriesBG.png') }}"
                 alt="Kamo's Kitchen food" class="aspect-square w-full object-cover">
 
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80"
+            <img src="{{ asset('storage/kamos-kitchen/wings.png') }}"
                 alt="Freshly prepared food" class="aspect-square w-full object-cover">
 
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=80"
+            <img src="{{ asset('storage/kamos-kitchen/thetest.jpeg') }}"
                 alt="Fresh meal" class="aspect-square w-full object-cover">
 
-            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+            <img src="{{ asset('storage/kamos-kitchen/kamo_6.jpeg') }}"
                 alt="Food prepared in the kitchen" class="aspect-square w-full object-cover">
 
         </div>

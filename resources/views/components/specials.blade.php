@@ -6,7 +6,7 @@
 
             {{-- Image --}}
             <div class="overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=85"
+                <img src="{{ asset('storage/kamos-kitchen/burger.png') }}"
                     alt="Kamo's seasonal special" class="aspect-[4/5] w-full object-cover">
             </div>
 

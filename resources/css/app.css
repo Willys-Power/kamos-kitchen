@@ -1,18 +1,33 @@
 @import "tailwindcss";
 
+/* ============================================================
+   KAMO'S KITCHEN DESIGN SYSTEM
+============================================================ */
+
 @theme {
     --color-kamo-green: #699260;
+    --color-kamo-green-dark: #4e7148;
+
     --color-kamo-olive: #647334;
+
     --color-kamo-orange: #e98019;
-    --color-kamo-gold: #f0a836;
+    --color-kamo-orange-dark: #b95612;
+
     --color-kamo-yellow: #f9cf52;
-    --color-kamo-black: #29160d;
+    --color-kamo-gold: #f0a836;
+
     --color-kamo-cream: #eff3e8;
 
-    --font-display: "Anton", sans-serif;
-    --font-body: "Inter", sans-serif;
+    --color-kamo-brown: #351b12;
+
+    --font-display: "Lilita One", sans-serif;
     --font-script: "Caveat", cursive;
+    --font-body: "DM Sans", sans-serif;
 }
+
+/* ============================================================
+   GLOBAL
+============================================================ */
 
 html {
     scroll-behavior: smooth;
@@ -20,36 +35,853 @@ html {
 
 body {
     overflow-x: hidden;
+    font-family: var(--font-body);
 }
 
-@keyframes heroTitle {
-    0% {
+/* ============================================================
+   NAVIGATION
+============================================================ */
+
+.kamo-nav-link {
+    position: relative;
+
+    color: var(--color-kamo-cream);
+
+    font-family: var(--font-body);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    transition:
+        color 200ms ease,
+        transform 200ms ease;
+}
+
+.kamo-nav-link:hover {
+    color: var(--color-kamo-yellow);
+
+    transform: translateY(-2px);
+}
+
+.kamo-order-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--color-kamo-yellow);
+
+    padding: 0.8rem 1.25rem;
+
+    color: var(--color-kamo-brown);
+
+    font-family: var(--font-body);
+
+    font-size: 0.7rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    box-shadow: 4px 4px 0 var(--color-kamo-brown);
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        background 180ms ease;
+}
+
+.kamo-order-button:hover {
+    background: var(--color-kamo-orange);
+
+    transform: translate(3px, 3px);
+
+    box-shadow: 1px 1px 0 var(--color-kamo-brown);
+}
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.kamo-hero {
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(255, 255, 255, 0.08),
+            transparent 45%
+        ),
+        var(--color-kamo-green);
+}
+
+/* ============================================================
+   PAPER TEXTURE
+============================================================ */
+
+.kamo-paper-texture {
+    z-index: 1;
+
+    opacity: 0.22;
+
+    mix-blend-mode: multiply;
+
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+
+    background-size: 260px 260px;
+
+    pointer-events: none;
+}
+
+/* ============================================================
+   BACKGROUND BLOBS
+============================================================ */
+
+.kamo-blob {
+    position: absolute;
+
+    border-radius: 9999px;
+
+    pointer-events: none;
+
+    filter: blur(1px);
+}
+
+.kamo-blob-orange {
+    width: 20rem;
+
+    height: 20rem;
+
+    top: 18%;
+
+    left: -8rem;
+
+    background: var(--color-kamo-orange);
+
+    opacity: 0.25;
+
+    animation: kamoBlobOne 8s ease-in-out infinite;
+}
+
+.kamo-blob-yellow {
+    width: 16rem;
+
+    height: 16rem;
+
+    right: -5rem;
+
+    bottom: 15%;
+
+    background: var(--color-kamo-yellow);
+
+    opacity: 0.18;
+
+    animation: kamoBlobTwo 10s ease-in-out infinite;
+}
+
+/* ============================================================
+   HERO TYPOGRAPHY
+============================================================ */
+
+.kamo-hero-tagline {
+    position: relative;
+
+    color: var(--color-kamo-brown);
+
+    font-family: var(--font-script);
+
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    transform: rotate(-3deg);
+
+    animation: kamoTaglineIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.kamo-hero-tagline span {
+    color: var(--color-kamo-orange);
+
+    padding: 0 0.35rem;
+}
+
+/* Main custom display treatment */
+
+.kamo-display {
+    position: relative;
+
+    margin: 0;
+
+    color: var(--color-kamo-cream);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(5.5rem, 19vw, 14rem);
+
+    line-height: 0.72;
+
+    letter-spacing: -0.045em;
+
+    -webkit-text-stroke: 3px var(--color-kamo-brown);
+
+    text-shadow:
+        5px 7px 0 var(--color-kamo-brown),
+        9px 11px 0 rgba(53, 27, 18, 0.25);
+
+    transform: rotate(-2deg);
+
+    animation: kamoTitleIn 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.kamo-display-shadow {
+    position: absolute;
+
+    inset: 0;
+
+    color: var(--color-kamo-brown);
+
+    -webkit-text-stroke: 0;
+
+    transform: translate(10px, 13px) rotate(-2deg);
+
+    text-shadow: none;
+
+    opacity: 0.8;
+
+    z-index: -1;
+}
+
+.kamo-display-orange {
+    color: var(--color-kamo-orange);
+}
+
+/* ============================================================
+   YELLOW BRUSH STROKE
+============================================================ */
+
+.kamo-brush-stroke {
+    position: relative;
+
+    display: inline-block;
+
+    margin-top: 1rem;
+
+    padding: 0.55rem 2rem;
+
+    transform: rotate(-2deg);
+
+    background: var(--color-kamo-yellow);
+
+    color: var(--color-kamo-brown);
+
+    font-family: var(--font-script);
+
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+
+    font-weight: 700;
+
+    box-shadow: 6px 6px 0 rgba(53, 27, 18, 0.18);
+
+    animation: kamoBrushIn 0.8s 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* rough brush edges */
+
+.kamo-brush-stroke::before,
+.kamo-brush-stroke::after {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 8px;
+
+    background: var(--color-kamo-yellow);
+}
+
+.kamo-brush-stroke::before {
+    left: -8px;
+
+    top: 6px;
+
+    transform: rotate(-8deg);
+}
+
+.kamo-brush-stroke::after {
+    right: -8px;
+
+    bottom: 6px;
+
+    transform: rotate(-8deg);
+}
+
+/* ============================================================
+   ORDER BUTTON
+============================================================ */
+
+.kamo-hero-order {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.8rem;
+
+    background: var(--color-kamo-brown);
+
+    padding: 1rem 1.5rem;
+
+    color: var(--color-kamo-cream);
+
+    font-family: var(--font-body);
+
+    font-size: 0.8rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    box-shadow: 6px 6px 0 var(--color-kamo-yellow);
+
+    transition:
+        transform 200ms ease,
+        box-shadow 200ms ease,
+        background 200ms ease;
+}
+
+.kamo-hero-order:hover {
+    background: var(--color-kamo-orange);
+
+    transform: translate(3px, 3px);
+
+    box-shadow: 2px 2px 0 var(--color-kamo-yellow);
+}
+
+.kamo-hero-order-arrow {
+    font-size: 1.25rem;
+
+    transition: transform 200ms ease;
+}
+
+.kamo-hero-order:hover .kamo-hero-order-arrow {
+    transform: translateX(5px);
+}
+
+/* ============================================================
+   FOOD
+============================================================ */
+
+.kamo-food {
+    position: absolute;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 18px 15px rgba(53, 27, 18, 0.25));
+}
+
+/* tomato */
+
+.kamo-food-tomato {
+    width: clamp(100px, 14vw, 220px);
+
+    top: 3%;
+
+    left: -2%;
+
+    transform: rotate(-18deg);
+
+    animation: kamoFoodOne 6s ease-in-out infinite;
+}
+
+/* lettuce */
+
+.kamo-food-lettuce {
+    width: clamp(100px, 13vw, 210px);
+
+    top: 2%;
+
+    right: -2%;
+
+    transform: rotate(12deg);
+
+    animation: kamoFoodTwo 7s ease-in-out infinite;
+}
+
+/* chicken */
+
+.kamo-food-chicken {
+    width: clamp(140px, 17vw, 280px);
+
+    left: -4%;
+
+    bottom: 13%;
+
+    transform: rotate(-8deg);
+
+    animation: kamoFoodThree 7s ease-in-out infinite;
+}
+
+/* burger */
+
+.kamo-food-burger {
+    width: clamp(250px, 50vw, 440px);
+
+    bottom: 25%;
+
+    transform: rotate(7deg);
+
+    /* animation: kamoFoodFour 8s ease-in-out infinite; */
+
+
+}
+
+/* fries */
+
+.kamo-food-fries {
+    width: clamp(130px, 17vw, 280px);
+
+    left: 7%;
+
+    bottom: -3%;
+
+    transform: rotate(-12deg);
+
+    animation: kamoFoodFive 6.5s ease-in-out infinite;
+}
+
+/* onion */
+
+.kamo-food-onion {
+    width: clamp(60px, 7vw, 110px);
+
+    right: 13%;
+
+    bottom: 19%;
+
+    animation: kamoFoodSix 5s ease-in-out infinite;
+}
+
+/* ============================================================
+   DOODLES
+============================================================ */
+
+.kamo-spark {
+    position: absolute;
+
+    z-index: 5;
+
+    color: var(--color-kamo-yellow);
+
+    font-size: 3rem;
+
+    line-height: 1;
+
+    pointer-events: none;
+
+    animation: kamoSpark 3s ease-in-out infinite;
+}
+
+.kamo-spark-one {
+    top: 22%;
+
+    left: 19%;
+
+    transform: rotate(10deg);
+}
+
+.kamo-spark-two {
+    top: 32%;
+
+    right: 17%;
+
+    font-size: 4rem;
+
+    animation-delay: 0.8s;
+}
+
+.kamo-spark-three {
+    bottom: 24%;
+
+    left: 28%;
+
+    font-size: 2rem;
+
+    animation-delay: 1.5s;
+}
+
+/* ============================================================
+   DOODLE LINES
+============================================================ */
+
+.kamo-doodle {
+    position: absolute;
+
+    display: flex;
+
+    gap: 5px;
+
+    z-index: 5;
+}
+
+.kamo-doodle span {
+    display: block;
+
+    width: 5px;
+
+    height: 34px;
+
+    border-radius: 999px;
+
+    background: var(--color-kamo-yellow);
+}
+
+.kamo-doodle-one {
+    top: 43%;
+
+    left: 12%;
+
+    transform: rotate(-35deg);
+}
+
+.kamo-doodle-two {
+    right: 10%;
+
+    top: 43%;
+
+    transform: rotate(35deg);
+}
+
+/* ============================================================
+   MARQUEE
+============================================================ */
+
+.kamo-marquee {
+    display: flex;
+
+    width: max-content;
+
+    animation: kamoMarquee 25s linear infinite;
+}
+
+.kamo-marquee > div {
+    display: flex;
+
+    align-items: center;
+}
+
+.kamo-marquee span {
+    margin: 0 1.5rem;
+
+    color: var(--color-kamo-brown);
+
+    font-family: var(--font-display);
+
+    font-size: 1.15rem;
+
+    letter-spacing: 0.05em;
+}
+
+.kamo-marquee b {
+    color: var(--color-kamo-yellow);
+
+    font-size: 1rem;
+}
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+
+@keyframes kamoTitleIn {
+    from {
         opacity: 0;
-        transform: translateY(80px) rotate(3deg);
+
+        transform: translateY(80px) rotate(5deg) scale(0.8);
     }
 
-    100% {
+    to {
         opacity: 1;
-        transform: translateY(0) rotate(0);
+
+        transform: translateY(0) rotate(-2deg) scale(1);
     }
 }
 
-@keyframes heroImage {
-    0% {
+@keyframes kamoTaglineIn {
+    from {
         opacity: 0;
-        transform: translateY(100px) rotate(12deg) scale(0.8);
+
+        transform: translateY(-20px) rotate(-10deg);
     }
 
-    100% {
+    to {
         opacity: 1;
-        transform: translateY(0) rotate(3deg) scale(1);
+
+        transform: translateY(0) rotate(-3deg);
     }
 }
 
-@keyframes heroFade {
+@keyframes kamoBrushIn {
+    from {
+        opacity: 0;
+
+        transform: translateY(30px) rotate(-8deg) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0) rotate(-2deg) scale(1);
+    }
+}
+
+@keyframes kamoFoodOne {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(-18deg);
+    }
+
+    50% {
+        transform: translate(15px, 18px) rotate(-8deg);
+    }
+}
+
+@keyframes kamoFoodTwo {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(12deg);
+    }
+
+    50% {
+        transform: translate(-15px, 18px) rotate(20deg);
+    }
+}
+
+@keyframes kamoFoodThree {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(-8deg);
+    }
+
+    50% {
+        transform: translate(18px, -15px) rotate(-2deg);
+    }
+}
+
+@keyframes kamoFoodFour {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(7deg);
+    }
+
+    50% {
+        transform: translate(-18px, -12px) rotate(1deg);
+    }
+}
+
+@keyframes kamoFoodFive {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(-12deg);
+    }
+
+    50% {
+        transform: translate(12px, -18px) rotate(-5deg);
+    }
+}
+
+@keyframes kamoFoodSix {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(25deg);
+    }
+}
+
+@keyframes kamoSpark {
+    0%,
+    100% {
+        opacity: 0.6;
+
+        transform: scale(0.9) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform: scale(1.2) rotate(20deg);
+    }
+}
+
+@keyframes kamoBlobOne {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(30px, -25px) scale(1.12);
+    }
+}
+
+@keyframes kamoBlobTwo {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-25px, 25px) scale(1.15);
+    }
+}
+
+@keyframes kamoMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ============================================================
+   ACCESSIBILITY
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+    .menu-reveal,
+    .menu-reveal-left,
+    .menu-reveal-price,
+    .menu-border-reveal {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+
+    .menu-leader {
+        opacity: 1;
+    }
+
+    .menu-item-row:hover {
+        transform: none;
+    }
+
+    .menu-cta::before {
+        transition: none;
+    }
+
+    .kamo-logo-art,
+    .kamo-logo-image,
+    .kamo-logo-steam span,
+    .kamo-logo-shine::after {
+        animation: none !important;
+    }
+
+    .kamo-loader-logo,
+    .kamo-fork,
+    .kamo-knife {
+        animation: none;
+    }
+}
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 640px) {
+    .kamo-display {
+        font-size: clamp(4.5rem, 22vw, 7rem);
+
+        -webkit-text-stroke: 2px var(--color-kamo-brown);
+
+        text-shadow: 3px 4px 0 var(--color-kamo-brown);
+    }
+
+    .kamo-food-tomato {
+        top: 8%;
+
+        left: -35px;
+    }
+
+    .kamo-food-lettuce {
+        top: 8%;
+
+        right: -35px;
+    }
+
+    .kamo-food-chicken {
+        left: -70px;
+
+        bottom: 18%;
+    }
+
+    .kamo-food-burger {
+        right: -80px;
+
+        bottom: 13%;
+    }
+
+    .kamo-food-fries {
+        left: -20px;
+
+        bottom: 0;
+
+        opacity: 0.8;
+    }
+
+    .kamo-food-onion {
+        right: 5%;
+
+        bottom: 25%;
+    }
+
+    .kamo-spark-one {
+        left: 7%;
+    }
+
+    .kamo-spark-two {
+        right: 6%;
+    }
+}
+
+/* Menu preview animations */
+
+@keyframes menuFadeUp {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(40px);
     }
 
     100% {
@@ -58,34 +890,657 @@ body {
     }
 }
 
-@keyframes blobFloat {
-    0%,
+@keyframes menuSlideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
     100% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    50% {
-        transform: translate(15px, -20px) scale(1.05);
-    }
-}
-
-@keyframes stickerFloat {
-    0%,
-    100% {
-        transform: translateY(0) rotate(-12deg);
-    }
-
-    50% {
-        transform: translateY(-10px) rotate(-8deg);
-    }
-}
-
-@keyframes marquee {
-    from {
+        opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes menuBorderGrow {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    100% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+@keyframes menuPricePop {
+    0% {
+        opacity: 0;
+        transform: translateX(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes menuDotPulse {
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes btnSlideFill {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    100% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+/* Scroll reveal base state — hidden until observer triggers */
+.menu-reveal {
+    opacity: 0;
+}
+
+.menu-reveal.is-visible {
+    animation: menuFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.menu-reveal-left {
+    opacity: 0;
+}
+
+.menu-reveal-left.is-visible {
+    animation: menuSlideLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.menu-reveal-price {
+    opacity: 0;
+}
+
+.menu-reveal-price.is-visible {
+    animation: menuPricePop 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.menu-border-reveal {
+    transform: scaleX(0);
+}
+
+.menu-border-reveal.is-visible {
+    animation: menuBorderGrow 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger delays for items */
+.menu-stagger-1 {
+    animation-delay: 0.1s;
+}
+.menu-stagger-2 {
+    animation-delay: 0.2s;
+}
+.menu-stagger-3 {
+    animation-delay: 0.3s;
+}
+.menu-stagger-4 {
+    animation-delay: 0.4s;
+}
+.menu-stagger-5 {
+    animation-delay: 0.5s;
+}
+.menu-stagger-6 {
+    animation-delay: 0.6s;
+}
+.menu-stagger-7 {
+    animation-delay: 0.7s;
+}
+
+/* Dotted leader line */
+.menu-leader {
+    flex: 1;
+    border-bottom: 1.5px dotted #cfc4b8;
+    margin: 0 12px;
+    min-width: 20px;
+    align-self: flex-end;
+    margin-bottom: 5px;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.5s;
+}
+
+.is-visible .menu-leader {
+    opacity: 1;
+}
+
+/* Hover effects for menu items */
+.menu-item-row {
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        padding 0.3s ease;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 0 -16px;
+}
+
+.menu-item-row:hover {
+    background-color: rgba(207, 196, 184, 0.2);
+    transform: translateX(4px);
+}
+
+.menu-item-row:hover .menu-item-price {
+    color: #8b5e3c;
+}
+
+.menu-item-row .menu-item-price {
+    transition: color 0.3s ease;
+}
+
+/* CTA button enhanced hover */
+.menu-cta {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.menu-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #241f1b;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: -1;
+}
+
+.menu-cta:hover::before {
+    transform: scaleX(1);
+}
+
+.menu-cta:hover {
+    color: white;
+}
+
+.menu-cta .cta-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.menu-cta:hover .cta-arrow {
+    transform: translateX(4px);
+}
+
+/* Decorative dot animation */
+.menu-deco-dot {
+    animation: menuDotPulse 3s ease-in-out infinite;
+}
+
+/* ============================================================
+   KAMO'S KITCHEN — MOTION LOGO
+============================================================ */
+
+.kamo-logo-motion {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    isolation: isolate;
+}
+
+/* ============================================================
+   LOGO ART
+============================================================ */
+
+.kamo-logo-art {
+    position: relative;
+
+    width: min(180px, 80vw);
+
+    animation: kamoLogoEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Actual logo */
+
+.kamo-logo-image {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    transform-origin: center bottom;
+
+    filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.25));
+
+    animation: kamoLogoFloat 5s ease-in-out 1.2s infinite;
+}
+
+/* ============================================================
+   STEAM
+============================================================ */
+
+.kamo-logo-steam {
+    position: absolute;
+
+    left: 40%;
+    top: -25px;
+
+    width: 80px;
+    height: 80px;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+.kamo-logo-steam span {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 8px;
+    height: 42px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        to top,
+        rgba(249, 207, 82, 0.85),
+        rgba(249, 207, 82, 0)
+    );
+
+    filter: blur(0.5px);
+
+    opacity: 0;
+
+    transform-origin: bottom;
+
+    animation: kamoSteam 2.8s ease-in-out infinite;
+}
+
+.kamo-logo-steam span:nth-child(1) {
+    left: 22px;
+
+    animation-delay: 0s;
+}
+
+.kamo-logo-steam span:nth-child(2) {
+    left: 47px;
+
+    height: 55px;
+
+    animation-delay: 0.6s;
+}
+
+.kamo-logo-steam span:nth-child(3) {
+    left: 70px;
+
+    height: 46px;
+
+    animation-delay: 1.2s;
+}
+
+/* ============================================================
+   SHINE
+============================================================ */
+
+.kamo-logo-shine {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    z-index: 10;
+}
+
+.kamo-logo-shine::after {
+    content: "";
+
+    position: absolute;
+
+    top: -30%;
+
+    left: -70%;
+
+    width: 35%;
+
+    height: 160%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.55),
+        transparent
+    );
+
+    transform: rotate(20deg);
+
+    animation: kamoLogoShine 5s ease-in-out 2.5s infinite;
+}
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+
+@keyframes kamoLogoEntrance {
+    0% {
+        opacity: 0;
+
+        transform: translateY(50px) scale(0.72) rotate(-4deg);
+    }
+
+    55% {
+        opacity: 1;
+
+        transform: translateY(-8px) scale(1.04) rotate(1deg);
+    }
+
+    75% {
+        transform: translateY(3px) scale(0.99) rotate(-0.5deg);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform: translateY(0) scale(1) rotate(0);
+    }
+}
+
+@keyframes kamoLogoFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-7px) rotate(0.6deg);
+    }
+}
+
+@keyframes kamoSteam {
+    0% {
+        opacity: 0;
+
+        transform: translateY(5px) scaleX(0.8) rotate(-8deg);
+    }
+
+    20% {
+        opacity: 0.85;
+    }
+
+    60% {
+        opacity: 0.5;
+
+        transform: translateY(-28px) scaleX(1.3) rotate(8deg);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform: translateY(-60px) scaleX(0.7) rotate(-5deg);
+    }
+}
+
+@keyframes kamoLogoShine {
+    0% {
+        left: -70%;
+    }
+
+    20%,
+    100% {
+        left: 130%;
+    }
+}
+
+/* ============================================================
+   KAMO'S KITCHEN — LOADING SCREEN
+============================================================ */
+
+.kamo-loader {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: radial-gradient(
+        circle at center,
+        #719b68 0%,
+        #52764d 45%,
+        #365b3a 100%
+    );
+
+    color: var(--color-kamo-cream);
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+}
+
+.kamo-loader.is-complete {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+/* ============================================================
+   INNER
+============================================================ */
+
+.kamo-loader-inner {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: min(420px, 85vw);
+
+    text-align: center;
+}
+
+/* ============================================================
+   LOGO
+============================================================ */
+
+.kamo-loader-logo {
+    width: min(270px, 70vw);
+
+    margin-bottom: 1.5rem;
+
+    animation: kamoLoaderLogo 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.kamo-loader-logo img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.25));
+}
+
+/* ============================================================
+   CUTLERY
+============================================================ */
+
+.kamo-cutlery-loader {
+    position: relative;
+
+    width: 150px;
+
+    height: 105px;
+
+    margin-bottom: 1.2rem;
+}
+
+/* Both utensils */
+
+.kamo-cutlery-loader svg {
+    position: absolute;
+
+    width: 55px;
+
+    height: 110px;
+
+    overflow: visible;
+
+    fill: none;
+
+    stroke: var(--color-kamo-cream);
+
+    stroke-width: 5;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+/* Fork */
+
+.kamo-fork {
+    left: 18px;
+
+    transform: rotate(-35deg) translateY(20px);
+
+    animation: kamoFork 1.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+/* Knife */
+
+.kamo-knife {
+    right: 18px;
+
+    transform: rotate(35deg) translateY(20px);
+
+    animation: kamoKnife 1.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+/* ============================================================
+   PROGRESS BAR
+============================================================ */
+
+.kamo-loader-progress {
+    position: relative;
+
+    width: min(320px, 75vw);
+
+    height: 8px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: rgba(239, 243, 232, 0.18);
+
+    border: 1px solid rgba(239, 243, 232, 0.25);
+}
+
+.kamo-loader-progress-bar {
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        var(--color-kamo-yellow),
+        var(--color-kamo-orange)
+    );
+
+    box-shadow: 0 0 15px rgba(249, 207, 82, 0.4);
+
+    transition: width 0.15s linear;
+}
+
+/* ============================================================
+   LOADER TEXT
+============================================================ */
+
+.kamo-loader-text {
+    margin-top: 1rem;
+
+    color: rgba(239, 243, 232, 0.75);
+
+    font-family: var(--font-body);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+
+@keyframes kamoLoaderLogo {
+    from {
+        opacity: 0;
+
+        transform: translateY(25px) scale(0.85);
     }
 
     to {
-        transform: translateX(-50%);
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes kamoFork {
+    0%,
+    100% {
+        transform: rotate(-35deg) translateY(20px);
+    }
+
+    50% {
+        transform: rotate(-20deg) translateY(0);
+    }
+}
+
+@keyframes kamoKnife {
+    0%,
+    100% {
+        transform: rotate(35deg) translateY(20px);
+    }
+
+    50% {
+        transform: rotate(20deg) translateY(0);
     }
 }

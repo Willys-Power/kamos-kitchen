@@ -9,10 +9,19 @@
 
     <meta name="description" content="Kamo's Kitchen — delicious, freshly prepared food made with love.">
 
+    {{-- Google Fonts --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=Lilita+One&display=swap"
+        rel="stylesheet">
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="bg-[#f7f3ed] text-[#241f1b] antialiased">
+    {{-- <x-kamo-loader /> --}}
 
     <x-navbar />
 
@@ -27,7 +36,7 @@
 
         <x-menu-preview />
 
-        <x-catering />
+        {{-- <x-catering /> --}}
 
         <x-social />
 

@@ -40,7 +40,7 @@
 
             <div class="relative">
 
-                <img src="{{ asset('storage/kamo_owner.jpeg') }}" alt="Cooking in the kitchen"
+                <img src="{{ asset('storage/kamos-kitchen/kamo_owner.jpeg') }}" alt="Cooking in the kitchen"
                     class="aspect-[4/5] w-full object-cover">
 
                 <div class="absolute -bottom-5 -left-5 hidden bg-[#f7f3ed] px-7 py-5 shadow-sm sm:block">

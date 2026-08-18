@@ -1,201 +1,203 @@
-<section
-    id="home"
-    class="relative min-h-screen overflow-hidden bg-kamo-green"
->
+<section id="home" class="kamo-hero relative min-h-screen overflow-hidden">
 
-    {{-- Decorative background --}}
-    <div
-        class="absolute inset-0 opacity-20"
-        aria-hidden="true"
-    >
-        <div class="absolute -left-20 top-32 h-72 w-72 rounded-full bg-kamo-yellow blur-3xl"></div>
+    {{-- ============================================================
+         PAPER TEXTURE
+    ============================================================= --}}
 
-        <div class="absolute -right-20 bottom-20 h-96 w-96 rounded-full bg-kamo-orange blur-3xl"></div>
+    <div class="pointer-events-none absolute inset-0 kamo-paper-texture"></div>
+
+
+    {{-- ============================================================
+         DECORATIVE BACKGROUND BLOBS
+    ============================================================= --}}
+
+    <div class="kamo-blob kamo-blob-orange"></div>
+
+    <div class="kamo-blob kamo-blob-yellow"></div>
+
+
+    {{-- ============================================================
+         DECORATIVE FOOD
+    ============================================================= --}}
+
+    {{-- Tomato --}}
+    <img src="{{ asset('storage/kamos-kitchen/tomato.png') }}" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-tomato">
+
+
+    {{-- Lettuce --}}
+    <img src="{{ asset('storage/kamos-kitchen/lettuce.png') }}" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-lettuce">
+
+
+    {{-- Chicken --}}
+    <img src="{{ asset('storage/kamos-kitchen/wings0.png') }}" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-chicken">
+
+
+    {{-- Burger --}}
+    <img src="{{ asset('storage/kamos-kitchen/wingsfries.png') }}" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-burger">
+
+
+    {{-- Fries --}}
+    <img src="{{ asset('storage/kamos-kitchen/fries.png') }}" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-fries">
+
+
+    {{-- Onion --}}
+    <img src="{{ asset('storage/kamos-kitchen/onions.png') }}" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-onion">
+
+
+    {{-- ============================================================
+         DECORATIVE DOODLES
+    ============================================================= --}}
+
+    <div class="kamo-spark kamo-spark-one">
+        ✦
+    </div>
+
+    <div class="kamo-spark kamo-spark-two">
+        ✦
+    </div>
+
+    <div class="kamo-spark kamo-spark-three">
+        ✦
     </div>
 
 
-    {{-- Decorative circles --}}
-    <div
-        class="absolute left-[8%] top-[30%] h-3 w-3 animate-pulse rounded-full bg-kamo-orange"
-    ></div>
+    <div class="kamo-doodle kamo-doodle-one">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <div class="kamo-doodle kamo-doodle-two">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    {{-- ============================================================
+         MAIN HERO CONTENT
+    ============================================================= --}}
 
     <div
-        class="absolute right-[12%] top-[20%] h-5 w-5 animate-bounce rounded-full bg-kamo-yellow"
-    ></div>
+        class="relative z-20 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 pb-28 pt-32 text-center">
+
+        {{-- Small tagline --}}
+        <div class="kamo-hero-tagline">
+            Homemade
+            <span>•</span>
+            Quality
+            <span>•</span>
+            Flavour
+        </div>
 
 
-    {{-- Main content --}}
-    <div class="relative mx-auto flex min-h-screen max-w-7xl items-center px-6 py-32 lg:px-8">
+        {{-- Main brand --}}
+        <div class="relative mt-5">
 
-        <div class="grid w-full items-center gap-10 lg:grid-cols-2">
+            {{-- Shadow / outline --}}
+            <h1 class="kamo-display kamo-display-shadow" aria-hidden="true">
+                Kamo's
+            </h1>
 
-
-            {{-- LEFT: Typography --}}
-            <div class="relative z-20">
-
-                {{-- Small brand label --}}
-                <div
-                    class="mb-6 inline-flex items-center gap-3 opacity-0 animate-[heroFade_.7s_.1s_ease-out_forwards]"
-                >
-                    <span class="h-2 w-2 rounded-full bg-kamo-orange"></span>
-
-                    <span class="font-body text-xs font-bold uppercase tracking-[0.3em] text-kamo-cream">
-                        Homemade. Quality. Flavor.
-                    </span>
-                </div>
-
-
-                {{-- Main headline --}}
-                <h1
-                    class="font-display text-[clamp(5rem,14vw,12rem)] uppercase leading-[.78] tracking-tight text-kamo-orange opacity-0 animate-[heroTitle_.9s_.2s_cubic-bezier(.16,1,.3,1)_forwards]"
-                >
-                    <span class="block">Good</span>
-
-                    <span class="relative block text-kamo-cream">
-
-                        Food
-
-                        {{-- Script accent --}}
-                        <span
-                            class="absolute -right-2 -top-8 font-script text-[4rem] font-bold normal-case leading-none text-kamo-yellow rotate-[-8deg] sm:-right-8 sm:text-[5rem]"
-                        >
-                            made fun
-                        </span>
-
-                    </span>
-
-                    <span class="block text-kamo-orange">
-                        loud.
-                    </span>
-                </h1>
-
-
-                {{-- Description --}}
-                <p
-                    class="mt-8 max-w-md font-body text-base leading-7 text-kamo-cream/85 opacity-0 animate-[heroFade_.7s_.7s_ease-out_forwards] sm:text-lg"
-                >
-                    Big flavours, homemade favourites and dishes made
-                    to bring people together.
-                </p>
-
-
-                {{-- CTA --}}
-                <div
-                    class="mt-8 flex flex-wrap gap-4 opacity-0 animate-[heroFade_.7s_.9s_ease-out_forwards]"
-                >
-
-                    <a
-                        href="#menu"
-                        class="group relative overflow-hidden bg-kamo-orange px-7 py-4 font-body text-xs font-extrabold uppercase tracking-[0.2em] text-kamo-black transition duration-300 hover:-translate-y-1 hover:bg-kamo-yellow"
-                    >
-                        <span class="relative z-10">
-                            Explore Menu
-                        </span>
-                    </a>
-
-
-                    <a
-                        href="#order"
-                        class="border-2 border-kamo-cream px-7 py-4 font-body text-xs font-extrabold uppercase tracking-[0.2em] text-kamo-cream transition duration-300 hover:-translate-y-1 hover:bg-kamo-cream hover:text-kamo-black"
-                    >
-                        Order Now
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            {{-- RIGHT: Food --}}
-            <div class="relative z-10 flex justify-center lg:justify-end">
-
-                {{-- Orange blob --}}
-                <div
-                    class="absolute h-[75%] w-[75%] rounded-full bg-kamo-orange blur-[2px] opacity-90 animate-[blobFloat_6s_ease-in-out_infinite]"
-                ></div>
-
-
-                {{-- Food image --}}
-                <div
-                    class="relative w-[85%] rotate-3 opacity-0 animate-[heroImage_1.1s_.3s_cubic-bezier(.16,1,.3,1)_forwards] sm:w-[75%] lg:w-[90%]"
-                >
-
-                    <div class="overflow-hidden rounded-[2rem] border-8 border-kamo-cream/20 shadow-2xl">
-
-                        <img
-                            src="{{ asset('storage/kamos-kitchen/hero.jpeg') }}"
-                            alt="Kamo's Kitchen signature food"
-                            class="aspect-[4/5] w-full object-cover transition duration-700 hover:scale-105"
-                        >
-
-                    </div>
-
-
-                    {{-- Floating sticker --}}
-                    <div
-                        class="absolute -bottom-8 -left-8 flex h-28 w-28 -rotate-12 items-center justify-center rounded-full bg-kamo-yellow text-center shadow-xl animate-[stickerFloat_4s_ease-in-out_infinite]"
-                    >
-                        <span class="font-display text-xl uppercase leading-none text-kamo-black">
-                            Fresh<br>
-                            &<br>
-                            Tasty
-                        </span>
-                    </div>
-
-
-                    {{-- Orange handwritten label --}}
-                    <div
-                        class="absolute -right-8 top-8 rotate-6 font-script text-5xl font-bold text-kamo-yellow drop-shadow-lg sm:text-6xl"
-                    >
-                        YUM!
-                    </div>
-
-                </div>
-
-            </div>
+            <h1 class="kamo-display">
+                Kamo's
+            </h1>
 
         </div>
 
+
+        <div class="relative -mt-3 sm:-mt-6">
+
+            {{-- Shadow --}}
+            <h2 class="kamo-display kamo-display-shadow kamo-display-orange" aria-hidden="true">
+                Kitchen
+            </h2>
+
+            <h2 class="kamo-display kamo-display-orange">
+                Kitchen
+            </h2>
+
+        </div>
+
+
+        {{-- Yellow hand-painted strap --}}
+        <div class="kamo-brush-stroke">
+
+            <span>
+                Food that brings people together.
+            </span>
+
+        </div>
+
+
+        {{-- CTA --}}
+        <div class="relative z-30 mt-7">
+
+            <a href="#order" class="kamo-hero-order">
+                <span>
+                    Order Now
+                </span>
+
+                <span class="kamo-hero-order-arrow">
+                    →
+                </span>
+            </a>
+
+        </div>
+
+
+        {{-- Small supporting text --}}
+        <p class="mt-5 max-w-sm font-body text-sm font-semibold text-kamo-cream/80 sm:text-base">
+            Homemade meals. Big flavour. Good vibes.
+        </p>
+
     </div>
 
 
-    {{-- Bottom ticker --}}
+    {{-- ============================================================
+         BOTTOM TICKER
+    ============================================================= --}}
+
     <div
-        class="absolute bottom-0 left-0 w-full overflow-hidden border-t-2 border-kamo-black/20 bg-kamo-orange py-3"
-    >
+        class="absolute bottom-0 left-0 z-40 w-full overflow-hidden border-t-2 border-kamo-brown/20 bg-kamo-orange py-3">
 
-        <div class="flex w-max animate-[marquee_18s_linear_infinite]">
+        <div class="kamo-marquee">
 
-            @for ($i = 0; $i < 6; $i++)
+            @for ($i = 0; $i < 8; $i++)
+                <div class="flex shrink-0 items-center">
 
-                <div class="flex items-center">
-
-                    <span class="mx-6 font-display text-xl uppercase text-kamo-black">
-                        Homemade
+                    <span>
+                        HOMEMADE
                     </span>
 
-                    <span class="text-kamo-yellow">
-                        ✦
+                    <b>✦</b>
+
+                    <span>
+                        QUALITY
                     </span>
 
-                    <span class="mx-6 font-display text-xl uppercase text-kamo-black">
-                        Quality
+                    <b>✦</b>
+
+                    <span>
+                        FLAVOUR
                     </span>
 
-                    <span class="text-kamo-yellow">
-                        ✦
+                    <b>✦</b>
+
+                    <span>
+                        KAMO'S KITCHEN
                     </span>
 
-                    <span class="mx-6 font-display text-xl uppercase text-kamo-black">
-                        Flavor
-                    </span>
-
-                    <span class="text-kamo-yellow">
-                        ✦
-                    </span>
+                    <b>✦</b>
 
                 </div>
-
             @endfor
 
         </div>
