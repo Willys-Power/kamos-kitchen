@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Laravel</title>
+
+    <meta name="description" content="Kamo's Kitchen — delicious, freshly prepared food made with love.">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=Lilita+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="preload" as="style" href="/build/assets/app-DWtfdnjG.css" /><link rel="modulepreload" as="script" href="/build/assets/app-hCTi1leP.js" /><link rel="stylesheet" href="/build/assets/app-DWtfdnjG.css" /><script type="module" src="/build/assets/app-hCTi1leP.js"></script></head>
+
+<body class="bg-[#f7f3ed] text-[#241f1b] antialiased">
+
+    
+
+    <header id="site-navbar" class="absolute inset-x-0 top-0 z-[100]">
+
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
+
+        
+        <button id="menu-button" type="button"
+            class="md:hidden relative z-[100] flex h-12 w-12 items-center justify-center rounded-full bg-kamo-yellow"
+            aria-label="Open menu">
+            <span class="sr-only">Open menu</span>
+
+            <div class="flex flex-col gap-1.5">
+                <span class="block h-0.5 w-6 bg-kamo-green"></span>
+                <span class="block h-0.5 w-6 bg-kamo-green"></span>
+                <span class="block h-0.5 w-6 bg-kamo-green"></span>
+            </div>
+        </button>
+
+
+        
+
+        <a href="/" class="absolute left-1/2 top-4 flex -translate-x-1/2 flex-col items-center">
+            <div class="kamo-logo-motion" aria-label="Kamo's Kitchen">
+
+    
+
+    <div class="kamo-logo-art">
+
+        <img src="/storage/kamos-kitchen/logo.png" alt="Kamo's Kitchen" class="kamo-logo-image object-contain drop-shadow-md sm:h-24">
+
+        
+        <div class="kamo-logo-steam" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        
+        
+
+    </div>
+
+</div>
+        </a>
+
+
+
+        
+        <div class="hidden items-center gap-8 md:flex">
+
+            <a href="#menu" class="kamo-nav-link">
+                Menu
+            </a>
+
+            <a href="#specials" class="kamo-nav-link">
+                Specials
+            </a>
+
+            <a href="#story" class="kamo-nav-link">
+                Our Story
+            </a>
+
+        </div>
+
+
+        
+        <div class="ml-auto flex items-center gap-3">
+
+            <a href="#catering"
+                class="hidden border-2 border-kamo-cream px-5 py-3 font-body text-xs font-extrabold uppercase tracking-[0.15em] text-kamo-cream transition hover:bg-kamo-cream hover:text-kamo-brown sm:block">
+                Catering
+            </a>
+
+            <a href="#order" class="kamo-order-button">
+                Order Now
+            </a>
+
+        </div>
+
+    </nav>
+
+    
+    <div id="mobile-menu" class="fixed inset-0 z-[90] hidden bg-kamo-green">
+
+        <div class="flex min-h-screen flex-col px-8 py-8">
+
+            
+            <div class="flex justify-end">
+
+                <button id="menu-close" type="button"
+                    class="flex h-12 w-12 items-center justify-center rounded-full bg-kamo-yellow text-2xl text-kamo-green"
+                    aria-label="Close menu">
+                    ×
+                </button>
+
+            </div>
+
+
+            
+            <nav class="flex flex-1 flex-col items-center justify-center gap-8">
+
+                <a href="#home" class="font-display text-5xl text-kamo-cream">
+                    Home
+                </a>
+
+                <a href="#menu" class="font-display text-5xl text-kamo-cream">
+                    Menu
+                </a>
+
+                <a href="#specials" class="font-display text-5xl text-kamo-cream">
+                    Specials
+                </a>
+
+                <a href="#story" class="font-display text-5xl text-kamo-cream">
+                    Our Story
+                </a>
+
+                <a href="#contact" class="font-display text-5xl text-kamo-cream">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </div>
+</header>
+
+    <main>
+        <section id="home" class="kamo-hero relative min-h-screen overflow-hidden">
+
+    
+
+    <div class="pointer-events-none absolute inset-0 kamo-paper-texture"></div>
+
+
+    
+
+    <div class="kamo-blob kamo-blob-orange"></div>
+
+    <div class="kamo-blob kamo-blob-yellow"></div>
+
+
+    
+
+    
+    <img src="/storage/kamos-kitchen/kamo_3blank.png" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-tomato">
+
+
+    
+    <img src="/storage/kamos-kitchen/lettuce.png" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-lettuce">
+
+
+    
+    <img src="/storage/kamos-kitchen/wings0.png" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-chicken">
+
+
+    
+    <img src="/storage/kamos-kitchen/wingsfries.png" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-burger">
+
+
+    
+    <img src="/storage/kamos-kitchen/fries.png" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-fries">
+
+
+    
+
+    <div class="kamo-spark kamo-spark-one">
+        ✦
+    </div>
+
+    <div class="kamo-spark kamo-spark-two">
+        ✦
+    </div>
+
+    <div class="kamo-spark kamo-spark-three">
+        ✦
+    </div>
+
+
+    <div class="kamo-doodle kamo-doodle-one">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    <div class="kamo-doodle kamo-doodle-two">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+    
+
+    <div
+        class="relative z-20 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 pb-28 pt-32 text-center">
+
+        
+        <div class="kamo-hero-tagline">
+            Homemade
+            <span>•</span>
+            Quality
+            <span>•</span>
+            Flavour
+        </div>
+
+
+        
+        <div class="relative mt-5">
+
+            
+            <h1 class="kamo-display kamo-display-shadow" aria-hidden="true">
+                Kamo's
+            </h1>
+
+            <h1 class="kamo-display">
+                Kamo's
+            </h1>
+
+        </div>
+
+
+        <div class="relative -mt-3 sm:-mt-6">
+
+            
+            <h2 class="kamo-display kamo-display-shadow kamo-display-orange" aria-hidden="true">
+                Kitchen
+            </h2>
+
+            <h2 class="kamo-display kamo-display-orange">
+                Kitchen
+            </h2>
+
+        </div>
+
+
+        
+        <div class="kamo-brush-stroke">
+
+            <span>
+                Food that brings people together.
+            </span>
+
+        </div>
+
+
+        
+        <div class="relative z-30 mt-7">
+
+            <a href="#order" class="kamo-hero-order">
+                <span>
+                    Order Now
+                </span>
+
+                <span class="kamo-hero-order-arrow">
+                    →
+                </span>
+            </a>
+
+        </div>
+
+
+        
+        <p class="mt-5 max-w-sm font-body text-sm font-semibold text-kamo-cream/80 sm:text-base">
+            Homemade meals. Big flavour. Good vibes.
+        </p>
+
+    </div>
+
+
+    
+
+    <div
+        class="absolute bottom-0 left-0 z-40 w-full overflow-hidden border-t-2 border-kamo-brown/20 bg-kamo-orange py-3">
+
+        <div class="kamo-marquee">
+
+                            <div class="flex shrink-0 items-center">
+
+                    <span>
+                        HOMEMADE
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        QUALITY
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        FLAVOUR
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        KAMO'S KITCHEN
+                    </span>
+
+                    <b>✦</b>
+
+                </div>
+                            <div class="flex shrink-0 items-center">
+
+                    <span>
+                        HOMEMADE
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        QUALITY
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        FLAVOUR
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        KAMO'S KITCHEN
+                    </span>
+
+                    <b>✦</b>
+
+                </div>
+                            <div class="flex shrink-0 items-center">
+
+                    <span>
+                        HOMEMADE
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        QUALITY
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        FLAVOUR
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        KAMO'S KITCHEN
+                    </span>
+
+                    <b>✦</b>
+
+                </div>
+                            <div class="flex shrink-0 items-center">
+
+                    <span>
+                        HOMEMADE
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        QUALITY
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        FLAVOUR
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        KAMO'S KITCHEN
+                    </span>
+
+                    <b>✦</b>
+
+                </div>
+                            <div class="flex shrink-0 items-center">
+
+                    <span>
+                        HOMEMADE
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        QUALITY
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        FLAVOUR
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        KAMO'S KITCHEN
+                    </span>
+
+                    <b>✦</b>
+
+                </div>
+                            <div class="flex shrink-0 items-center">
+
+                    <span>
+                        HOMEMADE
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        QUALITY
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        FLAVOUR
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        KAMO'S KITCHEN
+                    </span>
+
+                    <b>✦</b>
+
+                </div>
+                            <div class="flex shrink-0 items-center">
+
+                    <span>
+                        HOMEMADE
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        QUALITY
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        FLAVOUR
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        KAMO'S KITCHEN
+                    </span>
+
+                    <b>✦</b>
+
+                </div>
+                            <div class="flex shrink-0 items-center">
+
+                    <span>
+                        HOMEMADE
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        QUALITY
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        FLAVOUR
+                    </span>
+
+                    <b>✦</b>
+
+                    <span>
+                        KAMO'S KITCHEN
+                    </span>
+
+                    <b>✦</b>
+
+                </div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+        <section class="relative py-24 sm:py-32 overflow-hidden bg-[var(--color-kamo-cream)]">
+
+    
+    <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-12 border-2 border-kamo-orange rounded-full flex items-center justify-center opacity-0 animate-[slideUp_.5s_.3s_ease-out_forwards] sm:opacity-20">
+        <span class="text-xs font-bold uppercase tracking-wider text-kamo-orange">
+            ↓ Scroll for more
+        </span>
+    </div>
+
+    
+    <div
+        class="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-kamo-orange/5 via-kamo-yellow/5 to-transparent opacity-80 pointer-events-none">
+    </div>
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+        
+        <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+
+            <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.3em] text-kamo-olive">
+                    From our kitchen
+                </p>
+
+                <h2
+                    class="kamo-display kamo-display-orange mt-4 max-w-xl font-serif text-5xl leading-none tracking-tight sm:text-7xl">
+                    Made for the
+                    <span class="italic">moment.</span>
+                </h2>
+
+                
+                <div class="mt-8 flex items-center gap-3 pt-4 border-t border-kamo-orange/20">
+
+                    <a href="#order" class="kamo-hero-order flex items-center gap-2">
+                        <span>Order Now</span>
+
+                        <svg class="kamo-hero-order-arrow" width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+
+                </div>
+            </div>
+
+            
+            <div class="relative -top-6 right-0">
+                <div class="kamo-spark kamo-spark-one text-kamo-yellow animate-kamoSpark" style="font-size: 1.5rem;">
+                    &starf;
+                </div>
+                <div
+                    class="absolute -bottom-2 -right-2 rounded-full bg-kamo-green/20 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-kamo-green">
+                    Fresh
+                </div>
+            </div>
+
+        </div>
+
+
+        
+        
+
+        <div class="mt-16 md:mt-24">
+
+            <div class="grid grid-cols-1 gap-16 md:grid-cols-12 md:gap-8">
+
+
+                
+
+                <article class="kamo-dish-card group relative md:col-span-5 md:mt-8">
+
+                    
+                    <div
+                        class="absolute -left-3 -top-8 z-20 font-serif text-7xl font-black leading-none text-kamo-orange/20 md:-left-8">
+                        01
+                    </div>
+
+
+                    
+                    <div
+                        class="absolute -right-2 top-4 z-30 -rotate-6 font-script text-xl text-kamo-orange md:-right-8">
+                        crowd favourite
+                    </div>
+
+
+                    
+                    <div class="relative overflow-visible">
+
+                        
+                        <div class="absolute inset-0 translate-x-3 translate-y-3 rotate-2 bg-kamo-orange/20"></div>
+
+
+                        
+                        <div class="relative aspect-[4/5] overflow-hidden bg-kamo-brown">
+
+                            <img src="/storage/kamos-kitchen/kamo_3.png" alt="Gummy Smoothy"
+                                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-hover:rotate-1" />
+
+
+                            
+                            <div
+                                class="pointer-events-none absolute inset-0 bg-kamo-orange/0 transition-colors duration-500 group-hover:bg-kamo-orange/10">
+                            </div>
+
+
+                            
+                            <div class="absolute bottom-4 left-4 h-12 w-12 border-b-2 border-l-2 border-kamo-cream/70">
+                            </div>
+
+                        </div>
+
+
+                        
+                        <div
+                            class="absolute -bottom-6 -right-3 z-20 flex h-20 w-20 rotate-6 items-center justify-center rounded-full bg-kamo-yellow shadow-lg transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+
+                            <div class="text-center">
+
+                                <span class="block text-[9px] font-bold uppercase tracking-wider text-kamo-green">
+                                    only
+                                </span>
+
+                                <span class="block font-serif text-2xl font-black text-kamo-green">
+                                    R15
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="relative mt-10 pr-6">
+
+                        
+                        <div class="mb-4 flex items-center gap-3">
+
+                            <span class="h-[2px] w-12 rotate-1 bg-kamo-orange"></span>
+
+                            <span class="font-script text-sm text-kamo-orange">
+                                made fresh
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="font-display text-4xl leading-none text-kamo-cream md:text-5xl">
+                            Gummy
+                            <span class="text-kamo-orange">
+                                Smoothy
+                            </span>
+                        </h3>
+
+
+                        <p class="mt-4 max-w-sm text-sm leading-7 text-kamo-cream/70">
+                            Fresh ingredients, bold flavours and a little
+                            something sweet from Kamo's kitchen.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                
+
+                <article class="kamo-dish-card group relative md:col-span-5 md:col-start-8 md:-mt-12">
+
+                    
+                    <div
+                        class="absolute -right-2 -top-8 z-20 font-serif text-7xl font-black leading-none text-kamo-green/30 md:-right-8">
+                        02
+                    </div>
+
+
+                    
+                    <div class="absolute -left-4 top-8 z-30 rotate-3 font-script text-xl text-kamo-yellow md:-left-10">
+                        straight from the kitchen
+                    </div>
+
+
+                    
+                    <div class="relative overflow-visible">
+
+                        
+                        <div class="absolute inset-0 -translate-x-3 translate-y-3 -rotate-2 bg-kamo-green/30"></div>
+
+
+                        <div class="relative aspect-[4/5] overflow-hidden bg-kamo-brown">
+
+                            <img src="/storage/kamos-kitchen/special-meal.png" alt="Home Style Plate"
+                                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-hover:-rotate-1" />
+
+
+                            <div
+                                class="pointer-events-none absolute inset-0 bg-kamo-green/0 transition-colors duration-500 group-hover:bg-kamo-green/10">
+                            </div>
+
+
+                            
+                            <svg class="absolute right-5 top-5 h-8 w-8 text-kamo-yellow opacity-80 transition-transform duration-500 group-hover:rotate-45 group-hover:scale-125"
+                                viewBox="0 0 40 40" fill="none">
+                                <path d="M20 2L23 17L38 20L23 23L20 38L17 23L2 20L17 17L20 2Z" fill="currentColor" />
+                            </svg>
+
+                        </div>
+
+
+                        
+                        <div
+                            class="absolute -bottom-5 -left-4 z-20 rotate-[-7deg] bg-kamo-cream px-5 py-3 shadow-lg transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105">
+
+                            <span class="block font-serif text-2xl font-black text-kamo-green">
+                                R119
+                            </span>
+
+                            <span class="block text-[8px] font-bold uppercase tracking-[.2em] text-kamo-green/60">
+                                homemade
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="relative mt-10 pl-2">
+
+                        <div class="mb-4 flex items-center gap-3">
+
+                            <span class="font-script text-sm text-kamo-green">
+                                comfort food
+                            </span>
+
+                            <span class="h-[2px] w-10 -rotate-2 bg-kamo-green"></span>
+
+                        </div>
+
+
+                        <h3 class="font-display text-4xl leading-none text-kamo-cream md:text-5xl">
+                            Home-Style
+                            <span class="text-kamo-yellow">
+                                Plate
+                            </span>
+                        </h3>
+
+
+                        <p class="mt-4 max-w-sm text-sm leading-7 text-kamo-cream/70">
+                            Comfort food, the Kamo's way.
+                            Familiar flavours made with homemade love.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                
+
+                <article class="kamo-dish-card group relative md:col-span-7 md:col-start-3 md:mt-12">
+
+                    
+                    <div
+                        class="pointer-events-none absolute -left-16 -top-16 z-0 hidden font-serif text-[12rem] font-black leading-none text-kamo-yellow/10 md:block">
+                        03
+                    </div>
+
+
+                    
+                    <div
+                        class="absolute -right-3 -top-10 z-30 rotate-[-4deg] font-script text-2xl text-kamo-yellow md:right-4">
+                        Kamo's pick!
+                    </div>
+
+
+                    
+                    <div class="relative overflow-visible">
+
+                        
+                        <div class="absolute inset-0 translate-x-4 translate-y-4 -rotate-1 bg-kamo-yellow/20"></div>
+
+
+                        <div class="relative aspect-[16/10] overflow-hidden bg-kamo-brown">
+
+                            <img src="/storage/kamos-kitchen/kamo_4.png" alt="Kamo's Favourite"
+                                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-hover:rotate-[0.5deg]" />
+
+
+                            <div
+                                class="pointer-events-none absolute inset-0 bg-kamo-yellow/0 transition-colors duration-500 group-hover:bg-kamo-yellow/10">
+                            </div>
+
+
+                            
+                            <div class="pointer-events-none absolute inset-4 border border-kamo-cream/30"></div>
+
+                        </div>
+
+
+                        
+                        <div
+                            class="absolute -bottom-7 right-6 z-20 flex h-24 w-24 -rotate-3 items-center justify-center rounded-full border-4 border-kamo-green bg-kamo-yellow shadow-xl transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
+
+                            <div class="text-center">
+
+                                <span class="block font-script text-xs text-kamo-green">
+                                    just
+                                </span>
+
+                                <span class="block font-serif text-3xl font-black text-kamo-green">
+                                    R30
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="mt-10 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
+
+                        <div>
+
+                            <div class="mb-4 flex items-center gap-3">
+
+                                <span class="h-[2px] w-14 rotate-1 bg-kamo-yellow"></span>
+
+                                <span class="font-script text-sm text-kamo-yellow">
+                                    chef's choice
+                                </span>
+
+                            </div>
+
+
+                            <h3 class="font-display text-5xl leading-none text-kamo-cream md:text-6xl">
+                                Kamo's
+                                <span class="text-kamo-orange">
+                                    Favourite
+                                </span>
+                            </h3>
+
+
+                            <p class="mt-5 max-w-xl text-sm leading-7 text-kamo-cream/70">
+                                One of the dishes we love most.
+                                Prepared with the flavours that make
+                                Kamo's Kitchen feel like home.
+                            </p>
+
+                        </div>
+
+
+                        
+                        <div class="hidden md:block">
+
+                            <svg width="90" height="45" viewBox="0 0 90 45" fill="none"
+                                class="text-kamo-cream/50">
+
+                                <path d="M5 22C25 5 65 5 85 22" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+
+                                <path d="M20 29C35 20 55 20 70 29" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            
+
+            <div class="mt-20 flex justify-center">
+
+                <a href="#menu"
+                    class="group inline-flex items-center gap-4 font-display text-2xl text-kamo-cream transition-colors hover:text-kamo-yellow">
+
+                    <span>
+                        See the full menu
+                    </span>
+
+                    <span
+                        class="flex h-11 w-11 rotate-[-8deg] items-center justify-center rounded-full bg-kamo-orange text-kamo-cream transition-transform duration-300 group-hover:rotate-6 group-hover:translate-x-2">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        
+        <div class="mt-16 border-t border-kamo-orange/20 pt-8">
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-kamo-olive">
+                    Chef's recommendation
+                </p>
+
+                <a href="#order"
+                    class="kamo-hero-order text-sm px-5 py-3 rounded-full bg-kamo-orange hover:bg-kamo-orange/90 transition-colors duration-300 shadow-lg shadow-kamo-orange/20">
+                    Order Now
+                    <svg class="kamo-hero-order-arrow w-4 h-4" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    (() => {
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -60px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger animations for dishes
+                    const dishes = document.querySelectorAll(
+                        '.kamo-food, .kamo-display, .kamo-spark, article.grid > *');
+                    dishes.forEach((dish, i) => {
+                        setTimeout(() => {
+                            dish.style.animationPlayState = 'running';
+                        }, i * 120);
+                    });
+
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe the dishes container and hero elements
+        const elements = [
+            ...document.querySelectorAll('.kamo-food'),
+            ...document.querySelectorAll('.kamo-display'),
+            ...document.querySelectorAll('.kamo-spark')
+        ];
+
+        elements.forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    })();
+</script>
+
+        <section id="specials" class="bg-[#30261f] py-24 text-[#f7f3ed] sm:py-32">
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+        <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+
+            
+            <div class="overflow-hidden">
+                <img src="/storage/kamos-kitchen/burger.png"
+                    alt="Kamo's seasonal special" class="aspect-[4/5] w-full object-cover">
+            </div>
+
+
+            
+            <div class="lg:py-10">
+
+                <p class="text-xs font-semibold uppercase tracking-[0.3em] text-[#c9a987]">
+                    What's cooking
+                </p>
+
+                <h2 class="mt-5 font-serif text-5xl leading-none sm:text-7xl">
+                    Something
+                    <span class="italic">special.</span>
+                </h2>
+
+                <p class="mt-7 max-w-lg text-base leading-8 text-white/65">
+                    Our menu changes with the seasons, celebrations and
+                    whatever inspires Kamo in the kitchen.
+                </p>
+
+                <div class="mt-10 border-y border-white/15 py-6">
+
+                    <div class="flex items-start justify-between gap-6">
+
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.2em] text-white/50">
+                                Featured this month
+                            </p>
+
+                            <h3 class="mt-2 font-serif text-2xl">
+                                Seasonal Family Feast
+                            </h3>
+
+                            <p class="mt-2 text-sm text-white/60">
+                                A generous spread made for sharing.
+                            </p>
+                        </div>
+
+                        <span class="text-sm font-semibold">
+                            R499
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <a href="#order"
+                    class="mt-9 inline-block border border-white/50 px-7 py-4 text-xs font-bold uppercase tracking-[0.2em] transition hover:bg-white hover:text-[#30261f]">
+                    Explore specials
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <section id="story" class="bg-[#e8dfd4] py-24 sm:py-32">
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+        <div class="grid items-center gap-14 lg:grid-cols-2 lg:gap-24">
+
+            <div>
+
+                <p class="text-xs font-semibold uppercase tracking-[0.3em] text-[#8b5e3c]">
+                    Our story
+                </p>
+
+                <h2 class="mt-5 max-w-xl font-serif text-5xl leading-[0.95] sm:text-7xl">
+                    Good food starts
+                    with <span class="italic">good people.</span>
+                </h2>
+
+                <div class="mt-8 max-w-lg space-y-5 text-base leading-8 text-[#5f554d]">
+
+                    <p>
+                        Kamo's Kitchen started with a simple love for making
+                        food that brings people together.
+                    </p>
+
+                    <p>
+                        Every dish is prepared with care, inspired by the
+                        flavours, memories and moments that make food feel
+                        like home.
+                    </p>
+
+                </div>
+
+                <a href="#"
+                    class="mt-9 inline-block text-xs font-bold uppercase tracking-[0.2em] underline underline-offset-8">
+                    Meet Kamo
+                </a>
+
+            </div>
+
+
+            <div class="relative">
+
+                <img src="/storage/kamos-kitchen/kamo_owner.jpeg" alt="Cooking in the kitchen"
+                    class="aspect-[4/5] w-full object-cover">
+
+                <div class="absolute -bottom-5 -left-5 hidden bg-[#f7f3ed] px-7 py-5 shadow-sm sm:block">
+
+                    <p class="font-serif text-2xl italic">
+                        Made with love.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <section id="menu" class="relative overflow-hidden bg-[#f7f3ed] py-24 sm:py-32">
+
+    
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div class="absolute -left-32 top-16 h-64 w-64 rounded-full bg-[#8b5e3c]/5 blur-3xl"></div>
+        <div class="absolute -right-24 bottom-24 h-80 w-80 rounded-full bg-[#cfc4b8]/30 blur-3xl"></div>
+    </div>
+
+
+    <div class="relative mx-auto max-w-4xl px-6 lg:px-8">
+
+        
+        <div class="text-center">
+
+            <div class="menu-reveal menu-stagger-1">
+                <span class="menu-deco-dot mx-auto mb-5 block h-2 w-2 rounded-full bg-[#8b5e3c]"></span>
+
+                <p class="text-xs font-semibold uppercase tracking-[0.3em] text-[#8b5e3c]">
+                    The menu
+                </p>
+            </div>
+
+            <h2 class="menu-reveal menu-stagger-2 mt-4 font-serif text-5xl sm:text-7xl">
+                What's on the table?
+            </h2>
+
+            <p class="menu-reveal menu-stagger-3 mx-auto mt-5 max-w-md text-sm leading-relaxed text-[#756c64]">
+                A taste of what we love to cook — come in and try your favourite.
+            </p>
+
+        </div>
+
+
+        <div class="mt-20 space-y-4">
+
+            
+            
+            
+            <div class="menu-border-reveal border-t-2 border-[#8b5e3c]/40 py-10">
+
+                
+                <div class="menu-reveal-left flex items-baseline justify-between">
+
+                    <div class="flex items-baseline gap-4">
+                        <h3 class="font-serif text-3xl sm:text-4xl">
+                            Mains
+                        </h3>
+
+                        <span class="menu-deco-dot hidden h-1.5 w-1.5 rounded-full bg-[#8b5e3c] sm:inline-block"></span>
+                    </div>
+
+                    <span class="text-xs uppercase tracking-[0.2em] text-[#8b5e3c]">
+                        Favourites
+                    </span>
+
+                </div>
+
+                
+                <div class="mt-8 space-y-1">
+
+                    
+                    <div class="menu-reveal menu-item-row flex items-center gap-6 menu-stagger-1">
+                        <div class="min-w-0 flex-1">
+                            <h4 class="font-medium">
+                                Kamo's Chicken Plate
+                            </h4>
+
+                            <p class="mt-1 text-sm text-[#756c64]">
+                                Tender chicken, seasonal sides and house flavours.
+                            </p>
+                        </div>
+
+                        <span class="menu-leader"></span>
+
+                        <span class="menu-item-price shrink-0 text-lg font-semibold">
+                            R119
+                        </span>
+                    </div>
+
+                    
+                    <div class="menu-reveal menu-item-row flex items-center gap-6 menu-stagger-2">
+                        <div class="min-w-0 flex-1">
+                            <h4 class="font-medium">
+                                Signature Beef Bowl
+                            </h4>
+
+                            <p class="mt-1 text-sm text-[#756c64]">
+                                Slow-cooked beef with fresh seasonal ingredients.
+                            </p>
+                        </div>
+
+                        <span class="menu-leader"></span>
+
+                        <span class="menu-item-price shrink-0 text-lg font-semibold">
+                            R139
+                        </span>
+                    </div>
+
+                    
+                    <div class="menu-reveal menu-item-row flex items-center gap-6 menu-stagger-3">
+                        <div class="min-w-0 flex-1">
+                            <h4 class="font-medium">
+                                Vegetarian Kitchen Plate
+                            </h4>
+
+                            <p class="mt-1 text-sm text-[#756c64]">
+                                A colourful plate packed with flavour.
+                            </p>
+                        </div>
+
+                        <span class="menu-leader"></span>
+
+                        <span class="menu-item-price shrink-0 text-lg font-semibold">
+                            R109
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+            
+            
+            <div class="menu-border-reveal border-t-2 border-[#cfc4b8] py-10">
+
+                
+                <div class="menu-reveal-left flex items-baseline justify-between">
+
+                    <h3 class="font-serif text-3xl sm:text-4xl">
+                        Sides
+                    </h3>
+
+                </div>
+
+                
+                <div class="mt-8 space-y-1">
+
+                    
+                    <div class="menu-reveal menu-item-row flex items-center gap-6 menu-stagger-1">
+                        <span class="min-w-0 flex-1 font-medium">
+                            Seasonal vegetables
+                        </span>
+
+                        <span class="menu-leader"></span>
+
+                        <span class="menu-item-price shrink-0 text-lg font-semibold">
+                            R45
+                        </span>
+                    </div>
+
+                    
+                    <div class="menu-reveal menu-item-row flex items-center gap-6 menu-stagger-2">
+                        <span class="min-w-0 flex-1 font-medium">
+                            House salad
+                        </span>
+
+                        <span class="menu-leader"></span>
+
+                        <span class="menu-item-price shrink-0 text-lg font-semibold">
+                            R40
+                        </span>
+                    </div>
+
+                    
+                    <div class="menu-reveal menu-item-row flex items-center gap-6 menu-stagger-3">
+                        <span class="min-w-0 flex-1 font-medium">
+                            Signature chips
+                        </span>
+
+                        <span class="menu-leader"></span>
+
+                        <span class="menu-item-price shrink-0 text-lg font-semibold">
+                            R35
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="mt-14 text-center">
+
+            <a href="#"
+                class="menu-cta menu-reveal menu-stagger-4 group inline-flex items-center gap-3 border border-[#241f1b] px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] transition-colors duration-300">
+                <span>View full menu</span>
+
+                <span class="cta-arrow text-sm transition-transform duration-300 group-hover:translate-x-1">
+                    &rarr;
+                </span>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    
+    <script>
+        (() => {
+            const selectors = [
+                '.menu-reveal',
+                '.menu-reveal-left',
+                '.menu-reveal-price',
+                '.menu-border-reveal'
+            ];
+
+            const elements = document.querySelectorAll(selectors.join(', '));
+
+            if (!elements.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        })();
+    </script>
+
+</section>
+
+        
+
+        <section class="bg-[#d6c5b4] py-24 sm:py-32">
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+
+            <div>
+
+                <p class="text-xs font-semibold uppercase tracking-[0.3em] text-[#8b5e3c]">
+                    Follow along
+                </p>
+
+                <h2 class="mt-4 font-serif text-5xl sm:text-6xl">
+                    From our kitchen.
+                </h2>
+
+            </div>
+
+            <a href="#" class="text-xs font-bold uppercase tracking-[0.2em] underline underline-offset-8">
+                @kamoskitchen
+            </a>
+
+        </div>
+
+
+        <div class="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
+
+            <img src="/storage/kamos-kitchen/wingsfriesBG.png"
+                alt="Kamo's Kitchen food" class="aspect-square w-full object-cover">
+
+            <img src="/storage/kamos-kitchen/wings.png"
+                alt="Freshly prepared food" class="aspect-square w-full object-cover">
+
+            <img src="/storage/kamos-kitchen/thetest.jpeg"
+                alt="Fresh meal" class="aspect-square w-full object-cover">
+
+            <img src="/storage/kamos-kitchen/kamo_6.jpeg"
+                alt="Food prepared in the kitchen" class="aspect-square w-full object-cover">
+
+        </div>
+
+    </div>
+
+</section>
+
+        <section id="order" class="relative overflow-hidden bg-[#241f1b] py-28 text-white sm:py-40">
+
+    <div class="absolute inset-0 opacity-20">
+
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=2200&q=70"
+            alt="" class="h-full w-full object-cover">
+
+    </div>
+
+    <div class="relative mx-auto max-w-4xl px-6 text-center lg:px-8">
+
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-[#c9a987]">
+            Hungry?
+        </p>
+
+        <h2 class="mt-5 font-serif text-6xl leading-none sm:text-8xl">
+            Let's eat.
+        </h2>
+
+        <p class="mx-auto mt-7 max-w-lg text-base leading-7 text-white/60">
+            Your next favourite meal is waiting.
+        </p>
+
+        <a href="#"
+            class="mt-9 inline-block bg-white px-9 py-5 text-xs font-bold uppercase tracking-[0.2em] text-[#241f1b] transition hover:bg-[#eee6dc]">
+            Order on Mr D
+        </a>
+
+    </div>
+
+</section>
+    </main>
+
+    
+    <a href="https://wa.me/0648508581"
+        class="fixed bottom-16 right-6 rounded-full bg-green-600 px-5 py-4 font-body text-xs font-bold uppercase tracking-[0.15em] text-kamo-cream transition-colors duration-300 hover:bg-kamo-green/90 shadow-2xl shadow-kamo-green/20 z-[9999]"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Order via Whatsapp
+        
+    </a>
+
+    <footer class="bg-[#181411] text-white">
+
+    <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+
+        <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+
+            
+            <div class="lg:col-span-2">
+
+                <a href="/" class="inline-block">
+
+                    <span class="block font-serif text-3xl">
+                        Kamo's
+                    </span>
+
+                    <span class="block text-[0.65rem] uppercase tracking-[0.35em] text-white/50">
+                        Kitchen
+                    </span>
+
+                </a>
+
+                <p class="mt-6 max-w-sm text-sm leading-7 text-white/50">
+                    Freshly prepared food, comforting flavours and good
+                    moments around the table.
+                </p>
+
+            </div>
+
+
+            
+            <div>
+
+                <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-white/40">
+                    Explore
+                </h3>
+
+                <ul class="mt-5 space-y-3 text-sm">
+
+                    <li>
+                        <a href="#menu" class="text-white/70 transition hover:text-white">
+                            Menu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#specials" class="text-white/70 transition hover:text-white">
+                            Specials
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#story" class="text-white/70 transition hover:text-white">
+                            Our Story
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#catering" class="text-white/70 transition hover:text-white">
+                            Catering
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            
+            <div>
+
+                <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-white/40">
+                    Connect
+                </h3>
+
+                <ul class="mt-5 space-y-3 text-sm">
+
+                    <li>
+                        <a href="#" class="text-white/70 transition hover:text-white">
+                            Instagram
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-white/70 transition hover:text-white">
+                            TikTok
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:hello@kamoskitchen.co.za" class="text-white/70 transition hover:text-white">
+                            Email us
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="mt-16 flex flex-col justify-between gap-4 border-t border-white/10 pt-7 text-xs text-white/35 sm:flex-row">
+
+            <p>
+                © 2026 Kamo's Kitchen. All rights reserved.
+            </p>
+
+            <p>
+                Made with care.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
