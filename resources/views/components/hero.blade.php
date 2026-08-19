@@ -26,8 +26,8 @@
 
 
     {{-- Lettuce --}}
-    <img src="{{ asset('storage/kamos-kitchen/lettuce.png') }}" alt="" aria-hidden="true"
-        class="kamo-food kamo-food-lettuce">
+    <img src="{{ asset('storage/kamos-kitchen/wingsfries.png') }}" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-burger">
 
 
     {{-- Chicken --}}
@@ -36,8 +36,8 @@
 
 
     {{-- Burger --}}
-    <img src="{{ asset('storage/kamos-kitchen/wingsfries.png') }}" alt="" aria-hidden="true"
-        class="kamo-food kamo-food-burger">
+    <img src="{{ asset('storage/kamos-kitchen/lettuce.png') }}" alt="" aria-hidden="true"
+        class="kamo-food kamo-food-lettuce ">
 
 
     {{-- Fries --}}

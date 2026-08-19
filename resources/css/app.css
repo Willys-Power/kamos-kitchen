@@ -5,7 +5,7 @@
 ============================================================ */
 
 @theme {
-    --color-kamo-green: #699260;
+    --color-kamo-green: #3e7148; /*#699260;*/
     --color-kamo-green-dark: #4e7148;
 
     --color-kamo-olive: #647334;
@@ -400,7 +400,7 @@ body {
 /* tomato */
 
 .kamo-food-tomato {
-    width: clamp(150px, 14vw, 220px);
+    width: clamp(250px, 24vw, 320px);
 
     top: 3%;
 
@@ -442,11 +442,11 @@ body {
 /* burger */
 
 .kamo-food-burger {
-    width: clamp(250px, 80vw, 440px);
+    width: clamp(350px, 100vw, 1040px);
 
     bottom: 25%;
 
-    right: 15%;
+    right: 2%;
 
     transform: rotate(7deg);
 
@@ -873,6 +873,10 @@ body {
 
     .kamo-spark-two {
         right: 6%;
+    }
+
+    .kamo-hero-tagline{
+        visibility: hidden;
     }
 }
 
