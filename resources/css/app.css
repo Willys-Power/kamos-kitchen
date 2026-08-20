@@ -880,6 +880,14 @@ body {
     }
 }
 
+@media (max-width:450px){
+    .kamo-food-tomato {
+        top: 1%;
+
+        left: -25px;
+    }
+}
+
 /* Menu preview animations */
 
 @keyframes menuFadeUp {

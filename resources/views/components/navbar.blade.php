@@ -18,9 +18,9 @@
 
         {{-- LOGO --}}
 
-        <a href="/" class="absolute left-1/2 top-4 flex -translate-x-1/2 flex-col items-center">
+        {{-- <a href="/" class="absolute left-1/2 top-4 flex -translate-x-1/2 flex-col items-center">
             <x-animated-logo />
-        </a>
+        </a> --}}
 
 
 
